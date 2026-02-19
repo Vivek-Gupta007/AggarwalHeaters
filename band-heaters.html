@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Band Heaters - Industrial ceramic, mica, and aluminum band heaters for barrel heating. Premium quality from Aggarwal Heaters.">
+    <meta name="keywords" content="band heaters, ceramic band heaters, mica band heaters, barrel heaters, industrial heaters">
+    <meta name="author" content="Aggarwal Heaters">
+    
+    <title>Band Heaters | Ceramic & Mica | Aggarwal Heaters</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <style>
+        * { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+        
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #FF6B35; border-radius: 5px; }
+        
+        .product-hero {
+            background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+        }
+        
+        .spec-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid #FF6B35;
+        }
+        
+        .spec-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-button {
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-button.active {
+            background: #003366;
+            color: white;
+        }
+        
+        .feature-box {
+            transition: all 0.3s ease;
+            border: 2px solid #F5F5F5;
+        }
+        
+        .feature-box:hover {
+            border-color: #FF6B35;
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.2);
+        }
+        
+        .tab-button {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-button.active {
+            border-bottom-color: #FF6B35;
+            color: #003366;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-body overflow-x-hidden">
+    <!-- ============================================
+         NAVIGATION
+         ============================================ -->
+    <nav class="sticky top-0 z-50 bg-white shadow-lg" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="index.html" class="flex-shrink-0 group cursor-pointer">
+                    <div class="flex items-center gap-2">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-900 to-orange-500 rounded-lg flex items-center justify-center text-white font-bold">AH</div>
+                        <div>
+                            <h1 class="text-2xl font-bold text-blue-900">Aggarwal</h1>
+                            <p class="text-xs text-orange-500 font-semibold">Heating Solutions</p>
+                        </div>
+                    </div>
+                </a>
+                
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html" class="text-gray-700 hover:text-orange-500 transition font-semibold">Home</a>
+                    <a href="index.html#products" class="text-gray-700 hover:text-orange-500 transition font-semibold">Products</a>
+                    <a href="index.html" class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-blue-900 transition font-semibold">Contact</a>
+                </div>
+                
+                <button @click="open = !open" class="md:hidden text-blue-900 text-2xl">
+                    <i :class="open ? 'fas fa-times' : 'fas fa-bars'"></i>
+                </button>
+            </div>
+            
+            <div x-show="open" x-transition class="md:hidden pb-4">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-orange-500">Home</a>
+                <a href="index.html#products" class="block py-2 text-gray-700 hover:text-orange-500">Products</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         BREADCRUMB
+         ============================================ -->
+    <div class="bg-gray-50 py-3 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-2 text-sm">
+                <a href="index.html" class="text-orange-500 hover:text-blue-900">Home</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <a href="index.html#products" class="text-orange-500 hover:text-blue-900">Products</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <span class="text-gray-600 font-semibold">Band Heaters</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         PRODUCT HERO SECTION
+         ============================================ -->
+    <section class="product-hero text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- Left: Images -->
+                <div data-aos="fade-right">
+                    <!-- Main Image -->
+                    <div class="mb-6 rounded-xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=500&fit=crop" alt="Band Heaters" class="w-full h-auto">
+                    </div>
+                    
+                    <!-- Thumbnail Images -->
+                    <div class="grid grid-cols-4 gap-3">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=150&h=150&fit=crop" alt="Band Heater 1" class="rounded-lg cursor-pointer hover:shadow-lg transition">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=150&h=150&fit=crop" alt="Band Heater 2" class="rounded-lg cursor-pointer hover:shadow-lg transition">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=150&h=150&fit=crop" alt="Band Heater 3" class="rounded-lg cursor-pointer hover:shadow-lg transition">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=150&h=150&fit=crop" alt="Band Heater 4" class="rounded-lg cursor-pointer hover:shadow-lg transition">
+                    </div>
+                </div>
+                
+                <!-- Right: Product Info -->
+                <div data-aos="fade-left">
+                    <span class="bg-white bg-opacity-20 text-white px-4 py-1 rounded-full text-sm font-semibold">Premium Industrial Heater</span>
+                    
+                    <h1 class="text-5xl md:text-6xl font-display font-bold mt-4 mb-4">Band Heaters</h1>
+                    
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="flex text-yellow-300">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-200">(250+ customers)</span>
+                    </div>
+                    
+                    <p class="text-lg text-gray-100 mb-8 leading-relaxed">
+                        Our flagship Band Heaters are engineered for superior performance in barrel heating applications. Pioneer product with consistent temperature distribution, durability, and reliability trusted by manufacturers worldwide.
+                    </p>
+                    
+                    <!-- Key Points -->
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-yellow-300 mt-1 flex-shrink-0"></i>
+                            <span>ISO 9001:2015 Certified Quality</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-yellow-300 mt-1 flex-shrink-0"></i>
+                            <span>Customizable for specific applications</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-yellow-300 mt-1 flex-shrink-0"></i>
+                            <span>Expert technical support included</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-yellow-300 mt-1 flex-shrink-0"></i>
+                            <span>Quick delivery with global reach</span>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <a href="index.html" class="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
+                        <i class="fas fa-envelope mr-2"></i> Request Information
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PRODUCT VARIANTS
+         ============================================ -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-display font-bold text-blue-900 mb-4">Available Variants</h2>
+            <p class="text-xl text-gray-600 mb-12">Choose from our range of Band Heater configurations</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Variant 1 -->
+                <div class="feature-box bg-white rounded-xl p-6 text-center" data-aos="fade-up">
+                    <div class="text-5xl text-orange-500 mb-4 text-center">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Ceramic Band</h3>
+                    <p class="text-gray-600 text-sm mb-4">Traditional ceramic elements. Perfect for standard applications. Cost-effective and durable.</p>
+                    <a href="#" class="text-orange-500 hover:text-blue-900 font-semibold">Learn More →</a>
+                </div>
+                
+                <!-- Variant 2 -->
+                <div class="feature-box bg-white rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-5xl text-orange-500 mb-4 text-center">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Mica Band</h3>
+                    <p class="text-gray-600 text-sm mb-4">Premium mica insulation. Superior performance. High temperature resistance and longevity.</p>
+                    <a href="#" class="text-orange-500 hover:text-blue-900 font-semibold">Learn More →</a>
+                </div>
+                
+                <!-- Variant 3 -->
+                <div class="feature-box bg-white rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-5xl text-orange-500 mb-4 text-center">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Ceramic Die</h3>
+                    <p class="text-gray-600 text-sm mb-4">Specialized for die heating. Custom shapes. Quick heat distribution for injection molding.</p>
+                    <a href="#" class="text-orange-500 hover:text-blue-900 font-semibold">Learn More →</a>
+                </div>
+                
+                <!-- Variant 4 -->
+                <div class="feature-box bg-white rounded-xl p-6 text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-5xl text-orange-500 mb-4 text-center">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Energy Saving</h3>
+                    <p class="text-gray-600 text-sm mb-4">Advanced design. Reduced power consumption. Eco-friendly solution for operations.</p>
+                    <a href="#" class="text-orange-500 hover:text-blue-900 font-semibold">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SPECIFICATIONS
+         ============================================ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-display font-bold text-blue-900 mb-12">Technical Specifications</h2>
+            
+            <div class="overflow-x-auto rounded-xl shadow-lg border border-gray-200">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-blue-900 text-white">
+                            <th class="px-6 py-4 text-left font-bold">Specification</th>
+                            <th class="px-6 py-4 text-left font-bold">Ceramic Band</th>
+                            <th class="px-6 py-4 text-left font-bold">Mica Band</th>
+                            <th class="px-6 py-4 text-left font-bold">Die Heater</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Maximum Temperature</td>
+                            <td class="px-6 py-4">Up to 600°C</td>
+                            <td class="px-6 py-4">Up to 650°C</td>
+                            <td class="px-6 py-4">Up to 700°C</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Watt Density</td>
+                            <td class="px-6 py-4">3-8 W/cm²</td>
+                            <td class="px-6 py-4">5-10 W/cm²</td>
+                            <td class="px-6 py-4">4-9 W/cm²</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Insulation Material</td>
+                            <td class="px-6 py-4">Ceramic</td>
+                            <td class="px-6 py-4">Mica</td>
+                            <td class="px-6 py-4">Ceramic</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Operating Voltage</td>
+                            <td class="px-6 py-4">230V / 415V</td>
+                            <td class="px-6 py-4">230V / 415V</td>
+                            <td class="px-6 py-4">230V / 415V</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Expected Lifespan</td>
+                            <td class="px-6 py-4">3-5 Years</td>
+                            <td class="px-6 py-4">4-6 Years</td>
+                            <td class="px-6 py-4">3-5 Years</td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Customization</td>
+                            <td class="px-6 py-4">Available</td>
+                            <td class="px-6 py-4">Available</td>
+                            <td class="px-6 py-4">Custom Shape</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Quality Certification</td>
+                            <td class="px-6 py-4">ISO 9001:2015</td>
+                            <td class="px-6 py-4">ISO 9001:2015</td>
+                            <td class="px-6 py-4">ISO 9001:2015</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         APPLICATIONS
+         ============================================ -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-display font-bold text-blue-900 mb-12">Applications</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Application 1 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-orange-500" data-aos="fade-up">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-box text-4xl text-orange-500"></i>
+                        <h3 class="text-2xl font-bold text-blue-900">Injection Molding</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Barrel heating for plastic injection molding machines. Maintains consistent temperature for optimal material flow and product quality.
+                    </p>
+                </div>
+                
+                <!-- Application 2 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-orange-500" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-cogs text-4xl text-orange-500"></i>
+                        <h3 class="text-2xl font-bold text-blue-900">Extrusion</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Polymer extrusion equipment heating. Ensures uniform temperature distribution throughout the barrel for consistent output.
+                    </p>
+                </div>
+                
+                <!-- Application 3 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-orange-500" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-industry text-4xl text-orange-500"></i>
+                        <h3 class="text-2xl font-bold text-blue-900">Industrial Processing</h3>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        General industrial heating applications. Reliable temperature control for various manufacturing processes and equipment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FEATURES & BENEFITS
+         ============================================ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-display font-bold text-blue-900 mb-4">Why Choose Our Band Heaters?</h2>
+            <p class="text-xl text-gray-600 mb-12">Industry-leading features and benefits</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="spec-card bg-gray-50 p-6 rounded-lg" data-aos="fade-up">
+                    <h4 class="text-xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-check text-orange-500 mr-2"></i> Superior Temperature Control
+                    </h4>
+                    <p class="text-gray-600">Precise temperature distribution ensures consistent product quality and reduced wastage in manufacturing operations.</p>
+                </div>
+                
+                <div class="spec-card bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <h4 class="text-xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-check text-orange-500 mr-2"></i> Extended Lifespan
+                    </h4>
+                    <p class="text-gray-600">Durable construction and premium materials ensure long service life, reducing replacement frequency and maintenance costs.</p>
+                </div>
+                
+                <div class="spec-card bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-check text-orange-500 mr-2"></i> Easy Installation
+                    </h4>
+                    <p class="text-gray-600">Quick and hassle-free installation on most standard barrel designs. Compatible with existing equipment without major modifications.</p>
+                </div>
+                
+                <div class="spec-card bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="text-xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-check text-orange-500 mr-2"></i> Expert Support
+                    </h4>
+                    <p class="text-gray-600">Dedicated technical team provides installation guidance, troubleshooting, and ongoing support throughout product lifecycle.</p>
+                </div>
+                
+                <div class="spec-card bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="400">
+                    <h4 class="text-xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-check text-orange-500 mr-2"></i> Customization Available
+                    </h4>
+                    <p class="text-gray-600">Tailored solutions for specific applications. Custom wattage, voltage, and dimensions to match your exact requirements.</p>
+                </div>
+                
+                <div class="spec-card bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="500">
+                    <h4 class="text-xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-check text-orange-500 mr-2"></i> Certified Quality
+                    </h4>
+                    <p class="text-gray-600">ISO 9001:2015 certified manufacturing. Every product meets stringent quality standards and undergoes thorough testing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FAQ SECTION
+         ============================================ -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-display font-bold text-blue-900 mb-12 text-center">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4" x-data="{ open: null }">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+                    <button @click="open = open === 1 ? null : 1" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                        <span class="font-bold text-lg text-blue-900">What is the typical operating temperature range?</span>
+                        <i :class="open === 1 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
+                    </button>
+                    <div x-show="open === 1" class="px-6 pb-6 border-t text-gray-600">
+                        Our band heaters operate from ambient temperature up to 600-700°C depending on the variant. Ceramic band heaters reach 600°C, while mica variants can go up to 650°C, and die heaters up to 700°C. Custom temperature ranges are available upon request.
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <button @click="open = open === 2 ? null : 2" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                        <span class="font-bold text-lg text-blue-900">How long do band heaters typically last?</span>
+                        <i :class="open === 2 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
+                    </button>
+                    <div x-show="open === 2" class="px-6 pb-6 border-t text-gray-600">
+                        Expected lifespan is 3-6 years under normal operating conditions. Ceramic band heaters last 3-5 years, while mica variants extend to 4-6 years. Lifespan depends on temperature cycling, load consistency, and maintenance practices. Regular inspection ensures optimal performance.
+                    </div>
+                </div>
+                
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <button @click="open = open === 3 ? null : 3" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                        <span class="font-bold text-lg text-blue-900">Can band heaters be customized for specific applications?</span>
+                        <i :class="open === 3 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
+                    </button>
+                    <div x-show="open === 3" class="px-6 pb-6 border-t text-gray-600">
+                        Yes! Full customization is available. We can modify wattage, voltage, dimensions, insulation type, and design for your specific requirements. Contact our technical team with your specifications, and we'll create a tailored solution for your application.
+                    </div>
+                </div>
+                
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                    <button @click="open = open === 4 ? null : 4" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                        <span class="font-bold text-lg text-blue-900">What is the delivery timeline?</span>
+                        <i :class="open === 4 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
+                    </button>
+                    <div x-show="open === 4" class="px-6 pb-6 border-t text-gray-600">
+                        Standard band heaters have 2-3 week delivery time. Custom orders may require 4-6 weeks depending on complexity and customization level. For urgent requirements, express delivery options are available. Contact our sales team for specific timelines.
+                    </div>
+                </div>
+                
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+                    <button @click="open = open === 5 ? null : 5" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition">
+                        <span class="font-bold text-lg text-blue-900">Do you provide technical support and installation guidance?</span>
+                        <i :class="open === 5 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
+                    </button>
+                    <div x-show="open === 5" class="px-6 pb-6 border-t text-gray-600">
+                        Absolutely! Our expert technical team provides comprehensive support including installation guidance, operation training, troubleshooting assistance, and ongoing maintenance recommendations. We're available to help throughout the product lifecycle.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         RELATED PRODUCTS
+         ============================================ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-display font-bold text-blue-900 mb-12">Related Products</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="index.html#products" class="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+                    <div class="h-48 bg-gradient-to-br from-blue-900 to-orange-500 relative overflow-hidden flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop" alt="Cartridge Heaters" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Cartridge Heaters</h3>
+                        <p class="text-gray-600 text-sm mb-4">High watt density heaters for compact applications</p>
+                        <span class="text-orange-500 font-bold">Explore →</span>
+                    </div>
+                </a>
+                
+                <a href="index.html#products" class="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-yellow-500 relative overflow-hidden flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop" alt="Infrared Heaters" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Infrared Heaters</h3>
+                        <p class="text-gray-600 text-sm mb-4">Quartz infrared heaters for industrial heating</p>
+                        <span class="text-orange-500 font-bold">Explore →</span>
+                    </div>
+                </a>
+                
+                <a href="index.html#products" class="group rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+                    <div class="h-48 bg-gradient-to-br from-yellow-500 to-blue-900 relative overflow-hidden flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" alt="Coil Heaters" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6 bg-white">
+                        <h3 class="text-xl font-bold text-blue-900 mb-2">Coil Heaters</h3>
+                        <p class="text-gray-600 text-sm mb-4">Micro and mini tubular coil heating elements</p>
+                        <span class="text-orange-500 font-bold">Explore →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="py-20 bg-blue-900 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
+                Looking for Band Heaters?
+            </h2>
+            <p class="text-xl text-gray-100 mb-8">
+                Get expert guidance on selecting the right heating solution for your application
+            </p>
+            <a href="index.html" class="inline-block bg-orange-500 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-900 transition">
+                <i class="fas fa-envelope mr-2"></i> Contact Our Experts
+            </a>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Aggarwal Heaters</h3>
+                    <p class="text-gray-400 text-sm">Leading manufacturer of industrial heating elements since 1998</p>
+                    <div class="flex gap-3 mt-4">
+                        <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-yellow-500 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-yellow-500 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="index.html" class="hover:text-orange-500">Home</a></li>
+                        <li><a href="index.html#products" class="hover:text-orange-500">Products</a></li>
+                        <li><a href="index.html" class="hover:text-orange-500">About</a></li>
+                        <li><a href="index.html" class="hover:text-orange-500">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <p class="text-gray-400 text-sm mb-2">Ahmedabad, Gujarat</p>
+                    <p class="text-gray-400 text-sm mb-2">+91-9876543210</p>
+                    <p class="text-gray-400 text-sm">info@aggarwalheaters.com</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Certifications</h4>
+                    <p class="text-gray-400 text-sm mb-2">ISO 9001:2015</p>
+                    <p class="text-gray-400 text-sm mb-2">ISO 14001</p>
+                    <p class="text-gray-400 text-sm">Quality Assured</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Aggarwal Heaters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            offset: 100,
+            once: false,
+            mirror: true,
+        });
+    </script>
+</body>
+</html>
