@@ -2,18 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="description" content="Aggarwal Heaters - Leading manufacturer of industrial heating elements. Premium quality heaters for plastic, polymer & allied industries. Established 1998.">
-    <meta name="keywords" content="industrial heaters, heating elements, band heaters, cartridge heaters, nozzle heaters, infrared heaters, manufacturing">
+    <meta name="keywords" content="industrial heaters, heating elements, band heaters, cartridge heaters">
     <meta name="author" content="Aggarwal Heaters">
-    <meta property="og:title" content="Aggarwal Heaters - Industrial Heating Solutions">
-    <meta property="og:description" content="Premium quality industrial heating elements manufacturer in Ahmedabad">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#003366">
-    
-    <title>Aggarwal Heaters | Industrial Heating Elements Manufacturer | Premium Quality</title>
+    <title>Aggarwal Heaters | Industrial Heating Elements</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,63 +17,33 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS - Animate On Scroll -->
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     
-    <!-- Custom Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#003366',
-                        secondary: '#FF6B35',
-                        accent: '#FFB84D',
-                        dark: '#1a1a1a',
-                        light: '#F5F5F5',
-                    },
-                    fontFamily: {
-                        display: ['Playfair Display', 'serif'],
-                        body: ['Poppins', 'sans-serif'],
-                    },
-                    animation: {
-                        'float': 'float 3s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'slide-up': 'slide-up 0.6s ease-out',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        'slide-up': {
-                            '0%': { transform: 'translateY(30px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    
     <style>
         * {
             font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Playfair Display', serif;
         }
         
-        /* Smooth Scrolling */
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
         }
         
-        /* Custom Scrollbar */
+        body {
+            overflow-x: hidden;
+        }
+        
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -94,11 +57,6 @@
             border-radius: 5px;
         }
         
-        ::-webkit-scrollbar-thumb:hover {
-            background: #003366;
-        }
-        
-        /* Gradient Text */
         .gradient-text {
             background: linear-gradient(135deg, #003366 0%, #FF6B35 100%);
             -webkit-background-clip: text;
@@ -106,7 +64,6 @@
             background-clip: text;
         }
         
-        /* Hero Gradient */
         .hero-gradient {
             background: linear-gradient(135deg, #003366 0%, #004d99 50%, #FF6B35 100%);
             position: relative;
@@ -120,11 +77,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="30" fill="white" opacity="0.03"/><circle cx="80" cy="80" r="40" fill="white" opacity="0.02"/></svg>');
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="30" fill="white" opacity="0.03"/></svg>');
             opacity: 0.5;
         }
         
-        /* Card Hover Effect */
         .card-hover {
             transition: all 0.3s ease;
         }
@@ -134,7 +90,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
         
-        /* Button Effects */
         .btn-primary {
             position: relative;
             overflow: hidden;
@@ -157,567 +112,589 @@
             width: 300px;
             height: 300px;
         }
-        
-        /* Loading Animation */
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-        
-        .shimmer {
-            animation: shimmer 2s infinite;
-            background: linear-gradient(to right, #f0f0f0 8%, #f9f9f9 18%, #f0f0f0 33%);
-            background-size: 1000px 100%;
-        }
     </style>
 </head>
 <body class="bg-white text-gray-900 font-body overflow-x-hidden">
     <!-- ============================================
-         NAVIGATION BAR - STICKY & RESPONSIVE
+         NAVIGATION BAR
          ============================================ -->
-    <nav class="sticky top-0 z-50 bg-white shadow-lg" x-data="{ open: false }">
+    <nav class="fixed top-0 z-50 bg-white shadow-lg w-full" x-data="{ open: false }">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <!-- Logo & Branding -->
-                <div class="flex-shrink-0 group cursor-pointer">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
                     <div class="flex items-center gap-2">
-                        <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-900 to-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
                             AH
                         </div>
-                        <div>
-                            <h1 class="text-2xl font-bold text-primary">Aggarwal</h1>
-                            <p class="text-xs text-secondary font-semibold">Heating Solutions</p>
+                        <div class="hidden sm:block">
+                            <h1 class="text-xl sm:text-2xl font-bold text-blue-900">Aggarwal</h1>
+                            <p class="text-xs text-orange-500 font-semibold">Heating</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Desktop Navigation -->
+                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="#home" class="text-gray-700 hover:text-secondary transition font-semibold relative group">
-                        Home
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                    <a href="#products" class="text-gray-700 hover:text-secondary transition font-semibold relative group">
-                        Products
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                    <a href="#about" class="text-gray-700 hover:text-secondary transition font-semibold relative group">
-                        About
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                    <a href="#contact" class="bg-secondary text-white px-6 py-2 rounded-full hover:bg-primary transition transform hover:scale-105 font-semibold">
-                        Get Quote
-                    </a>
+                    <a href="#home" class="text-gray-700 hover:text-orange-500 transition font-semibold">Home</a>
+                    <a href="products.html" class="text-gray-700 hover:text-orange-500 transition font-semibold">Products</a>
+                    <a href="about.html" class="text-gray-700 hover:text-orange-500 transition font-semibold">About</a>
+                    <a href="contact.html" class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-blue-900 transition font-semibold">Get Quote</a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <button @click="open = !open" class="md:hidden text-primary text-2xl">
+                <button @click="open = !open" class="md:hidden text-blue-900 text-2xl">
                     <i :class="open ? 'fas fa-times' : 'fas fa-bars'"></i>
                 </button>
             </div>
             
             <!-- Mobile Menu -->
             <div x-show="open" x-transition class="md:hidden pb-4 border-t">
-                <a href="#home" class="block py-2 text-gray-700 hover:text-secondary font-semibold">Home</a>
-                <a href="#products" class="block py-2 text-gray-700 hover:text-secondary font-semibold">Products</a>
-                <a href="#about" class="block py-2 text-gray-700 hover:text-secondary font-semibold">About</a>
-                <a href="#contact" class="block mt-2 bg-secondary text-white px-4 py-2 rounded-lg text-center font-semibold">Get Quote</a>
+                <a href="#home" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">Home</a>
+                <a href="products.html" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">Products</a>
+                <a href="about.html" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">About</a>
+                <a href="contact.html" class="block mt-2 bg-orange-500 text-white px-4 py-2 rounded-lg text-center font-semibold w-full">Get Quote</a>
             </div>
         </div>
     </nav>
 
     <!-- ============================================
-         HERO SECTION - STUNNING ENTRY
+         HERO SECTION
          ============================================ -->
-    <section id="home" class="hero-gradient py-20 md:py-32 text-white relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+    <section id="home" class="hero-gradient py-12 md:py-20 lg:py-32 text-white relative w-full overflow-hidden" x-data="{ showVideoCarousel: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <!-- Left Content -->
-                <div data-aos="fade-right" data-aos-duration="1000">
+                <div data-aos="fade-right" data-aos-duration="1000" class="w-full">
                     <div class="mb-4">
-                        <span class="bg-white bg-opacity-20 text-white px-4 py-1 rounded-full text-sm font-semibold backdrop-blur">
-                            🏭 Since 1998 - Industry Leaders
+                        <span class="bg-white bg-opacity-20 text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold">
+                            🏭 Since 1998
                         </span>
                     </div>
-                    <h1 class="text-5xl md:text-6xl font-display font-bold mb-6 leading-tight">
-                        Premium Industrial <span class="text-accent">Heating</span> Solutions
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 md:mb-6 leading-tight">
+                        Premium Industrial <span class="text-yellow-300">Heating</span>
                     </h1>
-                    <p class="text-xl text-gray-100 mb-8 leading-relaxed">
-                        Trusted by 500+ manufacturers worldwide. Expert heating elements for plastic, polymer & industrial applications.
+                    <p class="text-base sm:text-lg md:text-xl text-gray-100 mb-6 md:mb-8 leading-relaxed">
+                        Trusted by 500+ manufacturers. Expert heating elements for all industries.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="btn-primary bg-secondary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-700 transition">
+                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                        <a href="#products" class="btn-primary bg-orange-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-lg hover:bg-orange-700 transition text-center">
                             Explore Products
-                        </button>
-                        <button class="btn-primary bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition flex items-center justify-center gap-2">
-                            <i class="fas fa-play"></i> Watch Demo
+                        </a>
+                        <button @click="showVideoCarousel = true" class="btn-primary bg-white text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-lg hover:bg-gray-100 transition flex items-center justify-center gap-2">
+                            <i class="fas fa-play"></i> <span class="hidden sm:inline">Watch Sample</span><span class="sm:hidden">Watch Sample</span>
                         </button>
                     </div>
                     
                     <!-- Stats -->
-                    <div class="grid grid-cols-3 gap-4 mt-12">
-                        <div class="border-l-4 border-accent pl-4">
-                            <p class="text-3xl font-bold">25+</p>
-                            <p class="text-sm text-gray-200">Years Experience</p>
+                    <div class="grid grid-cols-3 gap-3 sm:gap-4 mt-8 md:mt-12">
+                        <div class="border-l-4 border-yellow-300 pl-3 sm:pl-4">
+                            <p class="text-2xl sm:text-3xl font-bold">25+</p>
+                            <p class="text-xs sm:text-sm text-gray-200">Years</p>
                         </div>
-                        <div class="border-l-4 border-accent pl-4">
-                            <p class="text-3xl font-bold">500+</p>
-                            <p class="text-sm text-gray-200">Global Clients</p>
+                        <div class="border-l-4 border-yellow-300 pl-3 sm:pl-4">
+                            <p class="text-2xl sm:text-3xl font-bold">500+</p>
+                            <p class="text-xs sm:text-sm text-gray-200">Clients</p>
                         </div>
-                        <div class="border-l-4 border-accent pl-4">
-                            <p class="text-3xl font-bold">24</p>
-                            <p class="text-sm text-gray-200">Product Types</p>
+                        <div class="border-l-4 border-yellow-300 pl-3 sm:pl-4">
+                            <p class="text-2xl sm:text-3xl font-bold">24</p>
+                            <p class="text-xs sm:text-sm text-gray-200">Products</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Right - Hero Image -->
-                <div data-aos="fade-left" data-aos-duration="1000" class="relative">
+                <!-- Right - Image -->
+                <div data-aos="fade-left" data-aos-duration="1000" class="w-full">
                     <div class="relative">
-                        <!-- Floating Image Background -->
-                        <div class="absolute inset-0 bg-white opacity-10 rounded-3xl blur-3xl animate-pulse-slow"></div>
-                        
-                        <!-- Placeholder for Hero Image -->
-                        <div class="relative bg-gradient-to-br from-white to-gray-100 rounded-3xl p-8 shadow-2xl">
-                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=600&fit=crop" alt="Industrial Heating" class="w-full h-auto rounded-2xl shadow-lg object-cover">
-                            
-                            <!-- Floating Badge -->
-                            <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-6 rounded-2xl shadow-xl">
-                                <p class="text-sm font-semibold">ISO 9001:2015</p>
-                                <p class="text-xs text-gray-100">Certified Quality</p>
+                        <div class="absolute inset-0 bg-white opacity-10 rounded-3xl blur-3xl animate-pulse"></div>
+                        <div class="relative bg-gradient-to-br from-white to-gray-100 rounded-3xl p-4 sm:p-8 shadow-2xl">
+                            <img src="./images//Header.jpeg" alt="Industrial Heating" class="w-full h-auto rounded-2xl shadow-lg object-cover">
+                            <div class="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-orange-500 text-white p-3 sm:p-6 rounded-2xl shadow-xl">
+                                <p class="text-xs sm:text-sm font-semibold">ISO 9001:2015</p>
+                                <p class="text-xs text-gray-100">Certified</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- VIDEO CAROUSEL MODAL -->
+        <div x-show="showVideoCarousel" 
+             class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-end md:items-center justify-center p-0 md:p-4 w-screen" 
+             @click="showVideoCarousel = false" 
+             style="display: none;">
+            
+            <div @click.stop 
+                 class="bg-white rounded-t-3xl md:rounded-xl shadow-2xl w-full md:max-w-6xl md:max-h-[90vh] overflow-hidden flex flex-col max-h-[95vh]">
+                
+                <div class="sticky top-0 bg-blue-900 text-white p-4 md:p-6 flex justify-between items-center z-50">
+                    <h2 class="text-lg md:text-3xl font-bold">Videos</h2>
+                    <button @click="showVideoCarousel = false" class="text-2xl hover:text-gray-300 transition">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="overflow-y-auto flex-1">
+                    <div class="p-4 md:p-8 w-full">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                            
+                            <div class="rounded-lg overflow-hidden shadow-lg bg-black w-full">
+                                <div class="relative bg-black aspect-[9/12]">
+                                    <video class="w-full h-full object-cover" controls>
+                                        <source src="videos/your-video-1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="rounded-lg overflow-hidden shadow-lg bg-black w-full">
+                                <div class="relative bg-black aspect-[9/12]">
+                                    <video class="w-full h-full object-cover" controls>
+                                        <source src="videos/your-video-2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="rounded-lg overflow-hidden shadow-lg bg-black w-full">
+                                <div class="relative bg-black aspect-[9/12]">
+                                    <video class="w-full h-full object-cover" controls>
+                                        <source src="videos/your-video-3.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="rounded-lg overflow-hidden shadow-lg bg-black w-full">
+                                <div class="relative bg-black aspect-[9/12]">
+                                    <video class="w-full h-full object-cover" controls>
+                                        <source src="videos/your-video-4.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="rounded-lg overflow-hidden shadow-lg bg-black w-full">
+                                <div class="relative bg-black aspect-[9/12]">
+                                    <video class="w-full h-full object-cover" controls>
+                                        <source src="videos/your-video-1.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                            <div class="rounded-lg overflow-hidden shadow-lg bg-black w-full">
+                                <div class="relative bg-black aspect-[9/12]">
+                                    <video class="w-full h-full object-cover" controls>
+                                        <source src="videos/your-video-2.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="text-center mt-8 pb-4">
+                            <button @click="showVideoCarousel = false" 
+                                    class="bg-blue-900 text-white px-6 md:px-8 py-2 md:py-3 rounded-lg font-bold hover:bg-orange-500 transition w-full md:w-auto">
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- ============================================
-         FEATURES SECTION - WHY CHOOSE US
+         FEATURES SECTION
          ============================================ -->
-    <section class="py-20 bg-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-primary mb-4">
+    <section class="py-12 md:py-20 bg-gray-50 w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-blue-900 mb-4">
                     Why Choose <span class="gradient-text">Aggarwal Heaters</span>?
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Decades of expertise, cutting-edge manufacturing, and unwavering commitment to quality
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+                    Decades of expertise and commitment to quality
                 </p>
             </div>
             
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Feature 1 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border-t-4 border-secondary" data-aos="fade-up" data-aos-delay="0">
-                    <div class="text-5xl mb-4 text-secondary">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-t-4 border-orange-500">
+                    <div class="text-4xl md:text-5xl mb-4 text-orange-500">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-primary mb-3">Quality Assured</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        100% quality products with international certifications (ISO 9001:2015) and rigorous testing standards.
-                    </p>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Quality Assured</h3>
+                    <p class="text-gray-600 text-sm">ISO 9001:2015 certified with rigorous testing standards.</p>
                 </div>
                 
                 <!-- Feature 2 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border-t-4 border-accent" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-5xl mb-4 text-accent">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-t-4 border-yellow-500">
+                    <div class="text-4xl md:text-5xl mb-4 text-yellow-500">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-primary mb-3">Expert Support</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Technical guidance from design phase to installation with 24/7 customer service excellence.
-                    </p>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Expert Support</h3>
+                    <p class="text-gray-600 text-sm">Technical guidance and 24/7 customer service.</p>
                 </div>
                 
                 <!-- Feature 3 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border-t-4 border-secondary" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-5xl mb-4 text-secondary">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-t-4 border-orange-500">
+                    <div class="text-4xl md:text-5xl mb-4 text-orange-500">
                         <i class="fas fa-cog"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-primary mb-3">Custom Solutions</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Tailored heating elements designed specifically for your unique industrial applications.
-                    </p>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Custom Solutions</h3>
+                    <p class="text-gray-600 text-sm">Tailored heating elements for your applications.</p>
                 </div>
                 
                 <!-- Feature 4 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border-t-4 border-accent" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-5xl mb-4 text-accent">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-t-4 border-yellow-500">
+                    <div class="text-4xl md:text-5xl mb-4 text-yellow-500">
                         <i class="fas fa-rocket"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-primary mb-3">Fast Delivery</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Quick turnaround time with efficient logistics ensuring timely product delivery worldwide.
-                    </p>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Fast Delivery</h3>
+                    <p class="text-gray-600 text-sm">Quick turnaround with efficient logistics.</p>
                 </div>
                 
                 <!-- Feature 5 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border-t-4 border-secondary" data-aos="fade-up" data-aos-delay="400">
-                    <div class="text-5xl mb-4 text-secondary">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-t-4 border-orange-500">
+                    <div class="text-4xl md:text-5xl mb-4 text-orange-500">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-primary mb-3">Global Reach</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Serving customers across 50+ countries with reliable international shipping and support.
-                    </p>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Global Reach</h3>
+                    <p class="text-gray-600 text-sm">Serving 50+ countries worldwide.</p>
                 </div>
                 
                 <!-- Feature 6 -->
-                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border-t-4 border-accent" data-aos="fade-up" data-aos-delay="500">
-                    <div class="text-5xl mb-4 text-accent">
+                <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border-t-4 border-yellow-500">
+                    <div class="text-4xl md:text-5xl mb-4 text-yellow-500">
                         <i class="fas fa-award"></i>
                     </div>
-                    <h3 class="text-2xl font-display font-bold text-primary mb-3">Industry Leader</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        25+ years of manufacturing excellence and innovation in heating element technology.
-                    </p>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Industry Leader</h3>
+                    <p class="text-gray-600 text-sm">25+ years of manufacturing excellence.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================
-         PRODUCTS SECTION - SHOWCASE
+         PRODUCTS SECTION
          ============================================ -->
-    <section id="products" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
-            <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-secondary font-semibold text-lg">OUR PRODUCTS</span>
-                <h2 class="text-4xl md:text-5xl font-display font-bold text-primary mt-2 mb-4">
-                    Complete Range of <span class="gradient-text">Heating Elements</span>
+    <section id="products" class="py-12 md:py-20 bg-white w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-blue-900 mb-4">
+                    Our <span class="gradient-text">Heating Elements</span>
                 </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    24 different types of premium industrial heating elements for diverse applications
+                <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+                    24 different types for diverse applications
                 </p>
             </div>
             
-            <!-- Products Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product Card 1 -->
-                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200" data-aos="fade-up" data-aos-delay="0">
-                    <div class="h-48 bg-gradient-to-br from-primary to-secondary relative overflow-hidden flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&h=300&fit=crop" alt="Band Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                        <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-bold">Bestseller</div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Product 1 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-42 bg-gradient-to-br from-blue-900 to-orange-500 relative overflow-hidden flex items-center justify-center">
+                        <img src="images/BandHeater.avif" alt="Band Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <div class="absolute top-3 sm:top-4 right-3 sm:right-4 bg-orange-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold">Bestseller</div>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-display font-bold text-primary mb-2">Band Heaters</h3>
-                        <p class="text-gray-600 text-sm mb-4">Pioneer product with superior temperature distribution and durability for barrel heating.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">Ceramic</span>
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">Mica</span>
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">Die</span>
-                        </div>
-                        <a href="band-heaters.html" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-secondary transition font-semibold text-center block">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Band Heaters</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Superior temperature distribution for barrel heating.</p>
+                        <a href="band-heaters.html" class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm text-center block">
                             View Details
                         </a>
                     </div>
                 </div>
-                
-                <!-- Product Card 2 -->
-                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-48 bg-gradient-to-br from-secondary to-accent relative overflow-hidden flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop" alt="Cartridge Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                        <div class="absolute top-4 right-4 bg-accent text-primary px-3 py-1 rounded-full text-sm font-bold">New</div>
+
+                <!-- Product 2 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-42 bg-gradient-to-br from-orange-500 to-yellow-500 relative overflow-hidden flex items-center justify-center">
+                        <img src="/images//CartridgeHeater.avif" alt="Cartridge Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <!-- <div class="absolute top-3 sm:top-4 right-3 sm:right-4 bg-yellow-500 text-blue-900 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-bold">New</div> -->
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-display font-bold text-primary mb-2">Cartridge Heaters</h3>
-                        <p class="text-gray-600 text-sm mb-4">High watt density heaters for compact applications with wide range of configurations.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">High Density</span>
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">Compact</span>
-                        </div>
-                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-secondary transition font-semibold">
-                            View Details
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Product Card 3 -->
-                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-48 bg-gradient-to-br from-accent to-primary relative overflow-hidden flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop" alt="Infrared Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-display font-bold text-primary mb-2">Infrared Heaters</h3>
-                        <p class="text-gray-600 text-sm mb-4">Shortwave & medium wave quartz infrared for rapid, targeted industrial heating.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">Quartz</span>
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">Rapid</span>
-                        </div>
-                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-secondary transition font-semibold">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Cartridge Heaters</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">High watt density for compact applications.</p>
+                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
                             View Details
                         </button>
                     </div>
                 </div>
 
-                <!-- Product Card 4 -->
-                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200" data-aos="fade-up" data-aos-delay="300">
-                    <div class="h-48 bg-gradient-to-br from-primary to-accent relative overflow-hidden flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop" alt="Coil Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                <!-- Product 3 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-42 bg-gradient-to-br from-yellow-500 to-orange-500 relative overflow-hidden flex items-center justify-center">
+                        <img src="images//NozzleHeater.avif" alt="Controllers" class="w-full h-full object-cover hover:scale-110 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-display font-bold text-primary mb-2">Coil Heaters</h3>
-                        <p class="text-gray-600 text-sm mb-4">Micro & mini tubular coils with flexible forming for complex shape requirements.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">Flexible</span>
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">Micro</span>
-                        </div>
-                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-secondary transition font-semibold">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Nozzle Heaters</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Compact design for precise nozzle heating.</p>
+                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
                             View Details
                         </button>
                     </div>
                 </div>
 
-                <!-- Product Card 5 -->
-                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200" data-aos="fade-up" data-aos-delay="400">
-                    <div class="h-48 bg-gradient-to-br from-secondary to-primary relative overflow-hidden flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=400&h=300&fit=crop" alt="Strip Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                <!-- Product 4 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-42 bg-gradient-to-br from-yellow-500 to-blue-900 relative overflow-hidden flex items-center justify-center">
+                        <img src="/images/InfraredHeater.avif" alt="Infrared Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-display font-bold text-primary mb-2">Strip Heaters</h3>
-                        <p class="text-gray-600 text-sm mb-4">Mica & ceramic strips for effective surface heat transfer in various applications.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">Mica</span>
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">Surface</span>
-                        </div>
-                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-secondary transition font-semibold">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Infrared Heaters</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Rapid targeted industrial heating.</p>
+                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
                             View Details
                         </button>
                     </div>
                 </div>
 
-                <!-- Product Card 6 -->
-                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200" data-aos="fade-up" data-aos-delay="500">
-                    <div class="h-48 bg-gradient-to-br from-accent to-secondary relative overflow-hidden flex items-center justify-center">
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=400&h=300&fit=crop" alt="Temperature Controllers" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                <!-- Product 5 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-42 bg-gradient-to-br from-blue-900 to-yellow-500 relative overflow-hidden flex items-center justify-center">
+                        <img src="/images//CoilHeater.avif" alt="Coil Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-display font-bold text-primary mb-2">Temperature Controllers</h3>
-                        <p class="text-gray-600 text-sm mb-4">PID controllers and digital systems for precise heating element temperature management.</p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">PID</span>
-                            <span class="text-xs bg-primary bg-opacity-10 text-primary px-2 py-1 rounded">Digital</span>
-                        </div>
-                        <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-secondary transition font-semibold">
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Coil Heaters</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Flexible micro & mini tubular coils.</p>
+                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-42 bg-gradient-to-br from-orange-500 to-blue-900 relative overflow-hidden flex items-center justify-center">
+                        <img src="/images/StripHeater.avif" alt="Strip Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Strip Heaters</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Surface heat transfer solutions.</p>
+                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-42 bg-gradient-to-br from-yellow-500 to-orange-500 relative overflow-hidden flex items-center justify-center">
+                        <img src="/images/TubularHeatingElement.avif" alt="Controllers" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Tubular Heating Elements</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Designed for liquid immersion and air heating systems.</p>
+                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                    <div class="h-42 bg-gradient-to-br from-yellow-500 to-orange-500 relative overflow-hidden flex items-center justify-center">
+                        <img src="/images/Thermocouples.avif" alt="Controllers" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Thermocouples</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Used for precise temperature sensing in industrial processes.</p>
+                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
                             View Details
                         </button>
                     </div>
                 </div>
             </div>
             
-            <!-- View All Button -->
-            <div class="text-center mt-12" data-aos="fade-up">
-                <button class="btn-primary bg-secondary text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-orange-700 transition inline-flex items-center gap-2">
+            <div class="text-center mt-10 md:mt-12">
+                <a href="products.html" class="btn-primary bg-orange-500 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-lg hover:bg-orange-700 transition inline-flex items-center gap-2 text-center">
                     View All 24 Products <i class="fas fa-arrow-right"></i>
-                </button>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- ============================================
-         STATS SECTION - IMPRESSIVE NUMBERS
-         ============================================ -->
-    <section class="py-20 bg-primary text-white relative overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-10 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-            <div class="absolute bottom-10 right-10 w-72 h-72 bg-secondary rounded-full blur-3xl"></div>
-        </div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid md:grid-cols-4 gap-8 text-center">
-                <div data-aos="fade-up" data-aos-delay="0">
-                    <div class="text-5xl font-bold mb-2">25+</div>
-                    <p class="text-lg text-gray-200">Years of Excellence</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-5xl font-bold mb-2">500+</div>
-                    <p class="text-lg text-gray-200">Global Clients</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-5xl font-bold mb-2">24</div>
-                    <p class="text-lg text-gray-200">Product Types</p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-5xl font-bold mb-2">50+</div>
-                    <p class="text-lg text-gray-200">Expert Team</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         ABOUT SECTION - COMPANY STORY
-         ============================================ -->
-    <section id="about" class="py-20 bg-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Left - Image -->
-                <div data-aos="fade-right">
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop" alt="Aggarwal Heaters Facility" class="rounded-2xl shadow-2xl">
-                        <div class="absolute -bottom-6 -right-6 bg-secondary text-white p-8 rounded-2xl shadow-xl">
-                            <p class="text-4xl font-bold">1998</p>
-                            <p class="text-sm font-semibold">Company Founded</p>
-                        </div>
+     ANIMATED COUNTER SECTION
+     ============================================ -->
+    <section class="py-12 md:py-20 bg-blue-900 text-white w-full overflow-hidden" x-data="counterSection()">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+                <!-- Counter 1: Years -->
+                <div data-aos="fade-up">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
+                        <span x-text="years">0</span>+
                     </div>
+                    <p class="text-xs sm:text-lg text-gray-200">Years Experience</p>
                 </div>
                 
-                <!-- Right - Content -->
-                <div data-aos="fade-left">
-                    <h2 class="text-4xl md:text-5xl font-display font-bold text-primary mb-6">
-                        Our <span class="gradient-text">Journey</span> & Vision
-                    </h2>
-                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-                        Founded in 1998, Aggarwal Heaters has grown from a small operation to a market leader in industrial heating solutions. Our commitment to innovation, quality, and customer satisfaction has made us the trusted choice for manufacturers worldwide.
-                    </p>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        With a dedicated team of 50+ experts, state-of-the-art manufacturing facilities, and a commitment to sustainability, we continue to push the boundaries of heating technology.
-                    </p>
-                    
-                    <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="bg-white p-4 rounded-lg border-l-4 border-secondary">
-                            <h4 class="font-bold text-primary mb-1">ISO 9001:2015</h4>
-                            <p class="text-sm text-gray-600">Quality Certified</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg border-l-4 border-accent">
-                            <h4 class="font-bold text-primary mb-1">ISO 14001</h4>
-                            <p class="text-sm text-gray-600">Environmental Care</p>
-                        </div>
+                <!-- Counter 2: Clients -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
+                        <span x-text="clients">0</span>+
                     </div>
-                    
-                    <button class="btn-primary bg-secondary text-white px-8 py-4 rounded-lg font-bold hover:bg-orange-700 transition inline-flex items-center gap-2">
+                    <p class="text-xs sm:text-lg text-gray-200">Global Clients</p>
+                </div>
+                
+                <!-- Counter 3: Products -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
+                        <span x-text="products">0</span>
+                    </div>
+                    <p class="text-xs sm:text-lg text-gray-200">Product Types</p>
+                </div>
+                
+                <!-- Counter 4: Team -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
+                        <span x-text="team">0</span>+
+                    </div>
+                    <p class="text-xs sm:text-lg text-gray-200">Expert Team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    function counterSection() {
+        return {
+            years: 0,
+            clients: 0,
+            products: 0,
+            team: 0,
+            
+            init() {
+                // Intersection Observer to trigger animation when visible
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            this.startCounting();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(this.$el);
+            },
+            
+            startCounting() {
+                this.animateCounter('years', 25, 1500);
+                this.animateCounter('clients', 500, 1500);
+                this.animateCounter('products', 24, 1500);
+                this.animateCounter('team', 50, 1500);
+            },
+            
+            animateCounter(property, target, duration) {
+                const start = 0;
+                const increment = target / (duration / 16); // 60fps
+                let current = start;
+                
+                const interval = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        this[property] = target;
+                        clearInterval(interval);
+                    } else {
+                        this[property] = Math.floor(current);
+                    }
+                }, 16);
+            }
+        }
+    }
+    </script>
+
+    <!-- ============================================
+         ABOUT SECTION
+         ============================================ -->
+    <section id="about" class="py-12 md:py-20 bg-gray-50 w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=500&fit=crop" alt="Facility" class="rounded-2xl shadow-2xl w-full h-auto">
+                </div>
+                
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-blue-900 mb-4 md:mb-6">
+                        Our <span class="gradient-text">Journey</span>
+                    </h2>
+                    <p class="text-base sm:text-lg text-gray-700 mb-4 leading-relaxed">
+                        Founded in 1998, we've grown to be a market leader in industrial heating solutions. Commitment to innovation and quality made us the trusted choice worldwide.
+                    </p>
+                    <a href="about.html" class="btn-primary bg-orange-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-blue-900 transition inline-flex items-center gap-2">
                         Learn More <i class="fas fa-arrow-right"></i>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ============================================
-         CTA SECTION - FINAL PUSH
+         CTA SECTION
          ============================================ -->
-    <section id="contact" class="py-20 bg-gradient-to-r from-primary to-secondary text-white relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-        </div>
-        
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="fade-up">
-            <h2 class="text-4xl md:text-5xl font-display font-bold mb-6">
-                Ready to Upgrade Your Heating Systems?
+    <section id="contact" class="py-12 md:py-20 bg-gradient-to-r from-blue-900 to-orange-500 text-white w-full overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-4 md:mb-6">
+                Ready to Upgrade?
             </h2>
-            <p class="text-xl text-gray-100 mb-8 leading-relaxed">
-                Get in touch with our expert team for customized heating solutions and competitive quotes
+            <p class="text-base sm:text-lg md:text-xl text-gray-100 mb-6 md:mb-8 leading-relaxed">
+                Get in touch for customized solutions
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="btn-primary bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition">
-                    Request Free Quote
+                <button class="btn-primary bg-white text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-gray-100 transition text-sm sm:text-lg">
+                    Request Quote
                 </button>
-                <button class="btn-primary border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition">
-                    Contact Sales Team
+                <button class="btn-primary border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition text-sm sm:text-lg">
+                    Contact Sales
                 </button>
             </div>
         </div>
     </section>
 
     <!-- ============================================
-         FOOTER - COMPREHENSIVE & PROFESSIONAL
+         FOOTER
          ============================================ -->
-    <footer class="bg-dark text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <!-- Company Info -->
+    <footer class="bg-gray-900 text-white py-12 md:py-16 w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                 <div>
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-lg flex items-center justify-center font-bold">AH</div>
-                        <h3 class="text-xl font-bold">Aggarwal Heaters</h3>
-                    </div>
-                    <p class="text-gray-400 text-sm">
-                        Leading manufacturer of premium industrial heating elements since 1998
-                    </p>
-                    <div class="flex gap-3 mt-4">
-                        <a href="#" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition text-white">
+                    <h3 class="text-lg font-bold mb-4">Aggarwal Heaters</h3>
+                    <p class="text-gray-400 text-sm">Leading manufacturer since 1998</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#home" class="hover:text-orange-500">Home</a></li>
+                        <li><a href="#products" class="hover:text-orange-500">Products</a></li>
+                        <li><a href="#about" class="hover:text-orange-500">About</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <p class="text-gray-400 text-sm mb-2">Ahmedabad, Gujarat</p>
+                    <p class="text-gray-400 text-sm">+91-9876543210</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Follow</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-yellow-500 transition text-white">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition text-white">
+                        <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-yellow-500 transition text-white">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition text-white">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-secondary rounded-full flex items-center justify-center hover:bg-accent transition text-white">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#home" class="hover:text-secondary transition">Home</a></li>
-                        <li><a href="#products" class="hover:text-secondary transition">Products</a></li>
-                        <li><a href="#about" class="hover:text-secondary transition">About Us</a></li>
-                        <li><a href="#contact" class="hover:text-secondary transition">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Contact Info -->
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Contact</h4>
-                    <ul class="space-y-3 text-gray-400 text-sm">
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-map-marker-alt text-secondary mt-1 flex-shrink-0"></i>
-                            <span>Ahmedabad, Gujarat, India</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-phone text-secondary mt-1 flex-shrink-0"></i>
-                            <span>+91-9876543210</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i class="fas fa-envelope text-secondary mt-1 flex-shrink-0"></i>
-                            <span>info@aggarwalheaters.com</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Newsletter -->
-                <div>
-                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
-                    <p class="text-gray-400 text-sm mb-3">Subscribe for updates and exclusive offers</p>
-                    <div class="flex">
-                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 rounded-l-lg bg-gray-800 text-white placeholder-gray-500 focus:outline-none">
-                        <button class="bg-secondary px-4 py-2 rounded-r-lg hover:bg-accent transition">
-                            <i class="fas fa-arrow-right"></i>
-                        </button>
                     </div>
                 </div>
             </div>
             
-            <!-- Divider -->
-            <div class="border-t border-gray-800 my-8"></div>
-            
-            <!-- Bottom Footer -->
-            <div class="flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm">
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
                 <p>&copy; 2024 Aggarwal Heaters. All rights reserved.</p>
-                <div class="flex gap-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-secondary transition">Privacy Policy</a>
-                    <a href="#" class="hover:text-secondary transition">Terms of Service</a>
-                    <a href="#" class="hover:text-secondary transition">Disclaimer</a>
-                </div>
             </div>
         </div>
     </footer>
 
-    <!-- ============================================
-         SCRIPTS - ANIMATIONS & INTERACTIVITY
-         ============================================ -->
+    <!-- SCRIPTS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Initialize AOS
         AOS.init({
             duration: 1000,
             offset: 100,
@@ -725,7 +702,6 @@
             mirror: true,
         });
 
-        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -735,35 +711,6 @@
                 }
             });
         });
-
-        // JSON-LD Schema
-        const schema = {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Aggarwal Heaters",
-            "url": "https://aggarwalheaters.com",
-            "logo": "https://aggarwalheaters.com/logo.png",
-            "description": "Leading manufacturer of industrial heating elements",
-            "foundingDate": "1998",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Ahmedabad",
-                "addressRegion": "Gujarat",
-                "addressCountry": "IN"
-            },
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "Customer Support",
-                "telephone": "+91-9876543210",
-                "email": "info@aggarwalheaters.com"
-            }
-        };
-        
-        // Add schema to page
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(schema);
-        document.head.appendChild(script);
     </script>
 </body>
 </html>
