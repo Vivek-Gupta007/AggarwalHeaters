@@ -139,7 +139,7 @@
                     <a href="#home" class="text-gray-700 hover:text-orange-500 transition font-semibold">Home</a>
                     <a href="products.html" class="text-gray-700 hover:text-orange-500 transition font-semibold">Products</a>
                     <a href="about.html" class="text-gray-700 hover:text-orange-500 transition font-semibold">About</a>
-                    <a href="contact.html" class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-blue-900 transition font-semibold">Get Quote</a>
+                    <a href="contact.html" class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-blue-900 transition font-semibold">Contact</a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
@@ -153,7 +153,7 @@
                 <a href="#home" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">Home</a>
                 <a href="products.html" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">Products</a>
                 <a href="about.html" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">About</a>
-                <a href="contact.html" class="block mt-2 bg-orange-500 text-white px-4 py-2 rounded-lg text-center font-semibold w-full">Get Quote</a>
+                <a href="contact.html" class="block mt-2 bg-orange-500 text-white px-4 py-2 rounded-lg text-center font-semibold w-full">Contact</a>
             </div>
         </div>
     </nav>
@@ -187,17 +187,23 @@
                     </div>
                     
                     <!-- Stats -->
-                    <div class="grid grid-cols-3 gap-3 sm:gap-4 mt-8 md:mt-12">
+                    <div class="grid grid-cols-3 gap-3 sm:gap-4 mt-8 md:mt-12" x-data="counterSection()">
                         <div class="border-l-4 border-yellow-300 pl-3 sm:pl-4">
-                            <p class="text-2xl sm:text-3xl font-bold">25+</p>
+                            <span class="text-2xl sm:text-3xl font-bold flex">
+                                <p x-text="years">0</p>+
+                            </span>
                             <p class="text-xs sm:text-sm text-gray-200">Years</p>
                         </div>
                         <div class="border-l-4 border-yellow-300 pl-3 sm:pl-4">
-                            <p class="text-2xl sm:text-3xl font-bold">500+</p>
+                            <span class="text-2xl sm:text-3xl font-bold flex">
+                                <p x-text="clients">0</p>+
+                            </span>
                             <p class="text-xs sm:text-sm text-gray-200">Clients</p>
                         </div>
                         <div class="border-l-4 border-yellow-300 pl-3 sm:pl-4">
-                            <p class="text-2xl sm:text-3xl font-bold">24</p>
+                            <span class="text-2xl sm:text-3xl font-bold flex">
+                                <p x-text="products">0</p>+
+                            </span>
                             <p class="text-xs sm:text-sm text-gray-200">Products</p>
                         </div>
                     </div>
@@ -411,10 +417,10 @@
                     </div>
                     <div class="p-4 sm:p-6">
                         <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Cartridge Heaters</h3>
-                        <p class="text-gray-600 text-xs sm:text-sm mb-3">High watt density for compact applications.</p>
-                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">High-density cartridge heaters for precise and uniform heat distribution.</p>
+                        <a href="cartridge-heaters.html" class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm text-center block">
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -425,56 +431,28 @@
                     </div>
                     <div class="p-4 sm:p-6">
                         <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Nozzle Heaters</h3>
-                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Compact design for precise nozzle heating.</p>
-                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">High-performance nozzle heaters for precise and uniform heat control.</p>
+                        <a href="nozzle-heaters.html" class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm text-center block">
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Product 4 -->
-                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
-                    <div class="h-42 bg-gradient-to-br from-yellow-500 to-blue-900 relative overflow-hidden flex items-center justify-center">
-                        <img src="images/InfraredHeater.avif" alt="Infrared Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-4 sm:p-6">
-                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Infrared Heaters</h3>
-                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Rapid targeted industrial heating.</p>
-                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
-                            View Details
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
-                    <div class="h-42 bg-gradient-to-br from-blue-900 to-yellow-500 relative overflow-hidden flex items-center justify-center">
-                        <img src="images/CoilHeater.avif" alt="Coil Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
-                    </div>
-                    <div class="p-4 sm:p-6">
-                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Coil Heaters</h3>
-                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Flexible micro & mini tubular coils.</p>
-                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
-                            View Details
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
                 <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
                     <div class="h-42 bg-gradient-to-br from-orange-500 to-blue-900 relative overflow-hidden flex items-center justify-center">
                         <img src="images/StripHeater.avif" alt="Strip Heaters" class="w-full h-full object-cover hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-4 sm:p-6">
                         <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Strip Heaters</h3>
-                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Surface heat transfer solutions.</p>
-                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Compact, high-efficiency strip heaters for uniform surface heating.</p>
+                        <a href="strip-heaters.html" class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm text-center block">
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Product 7 -->
+                <!-- Product 5 -->
                 <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
                     <div class="h-42 bg-gradient-to-br from-yellow-500 to-orange-500 relative overflow-hidden flex items-center justify-center">
                         <img src="images/TubularHeatingElement.avif" alt="Controllers" class="w-full h-full object-cover hover:scale-110 transition duration-500">
@@ -482,23 +460,23 @@
                     <div class="p-4 sm:p-6">
                         <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Tubular Heating Elements</h3>
                         <p class="text-gray-600 text-xs sm:text-sm mb-3">Designed for liquid immersion and air heating systems.</p>
-                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
+                        <a href="tubular-heaters.html" class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm text-center block">
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Product 8 -->
+                <!-- Product 6 -->
                 <div class="card-hover bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl overflow-hidden shadow-lg border border-gray-200">
                     <div class="h-42 bg-gradient-to-br from-yellow-500 to-orange-500 relative overflow-hidden flex items-center justify-center">
-                        <img src="images/Thermocouples.avif" alt="Controllers" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        <img src="images/CustomHeater.avif" alt="Controllers" class="w-full h-full object-cover hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-4 sm:p-6">
-                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Thermocouples</h3>
-                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Used for precise temperature sensing in industrial processes.</p>
-                        <button class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm">
+                        <h3 class="text-lg sm:text-xl font-bold text-blue-900 mb-2">Custom Heaters</h3>
+                        <p class="text-gray-600 text-xs sm:text-sm mb-3">Designed to your specifications. Endless Possibilitles.</p>
+                        <a href="custom-heaters.html" class="w-full bg-blue-900 text-white py-2 rounded-lg hover:bg-orange-500 transition font-semibold text-sm text-center block">
                             View Details
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -552,54 +530,6 @@
         </div>
     </section>
 
-    <script>
-    function counterSection() {
-        return {
-            years: 0,
-            clients: 0,
-            products: 0,
-            team: 0,
-            
-            init() {
-                // Intersection Observer to trigger animation when visible
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            this.startCounting();
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                }, { threshold: 0.5 });
-                
-                observer.observe(this.$el);
-            },
-            
-            startCounting() {
-                this.animateCounter('years', 25, 1500);
-                this.animateCounter('clients', 500, 1500);
-                this.animateCounter('products', 24, 1500);
-                this.animateCounter('team', 50, 1500);
-            },
-            
-            animateCounter(property, target, duration) {
-                const start = 0;
-                const increment = target / (duration / 16); // 60fps
-                let current = start;
-                
-                const interval = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        this[property] = target;
-                        clearInterval(interval);
-                    } else {
-                        this[property] = Math.floor(current);
-                    }
-                }, 16);
-            }
-        }
-    }
-    </script>
-
     <!-- ============================================
          ABOUT SECTION
          ============================================ -->
@@ -637,12 +567,12 @@
                 Get in touch for customized solutions
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="btn-primary bg-white text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-gray-100 transition text-sm sm:text-lg">
+                <a href="contact.html" class="btn-primary bg-white text-blue-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-gray-100 transition text-sm sm:text-lg">
                     Request Quote
-                </button>
-                <button class="btn-primary border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition text-sm sm:text-lg">
+                </a>
+                <a href="contact.html" class="btn-primary border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition text-sm sm:text-lg">
                     Contact Sales
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -661,9 +591,10 @@
                 <div>
                     <h4 class="font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="#home" class="hover:text-orange-500">Home</a></li>
-                        <li><a href="#products" class="hover:text-orange-500">Products</a></li>
-                        <li><a href="#about" class="hover:text-orange-500">About</a></li>
+                        <!-- <li><a href="#home" class="hover:text-orange-500">Home</a></li> -->
+                        <li><a href="products.html" class="hover:text-orange-500">Products</a></li>
+                        <li><a href="about.html" class="hover:text-orange-500">About</a></li>
+                        <li><a href="contact.html" class="hover:text-orange-500">Contact</a></li>
                     </ul>
                 </div>
                 
@@ -711,6 +642,51 @@
                 }
             });
         });
+         function counterSection() {
+        return {
+            years: 0,
+            clients: 0,
+            products: 0,
+            team: 0,
+            
+            init() {
+                // Intersection Observer to trigger animation when visible
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            this.startCounting();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                
+                observer.observe(this.$el);
+            },
+            
+            startCounting() {
+                this.animateCounter('years', 25, 1500);
+                this.animateCounter('clients', 500, 1500);
+                this.animateCounter('products', 24, 1500);
+                this.animateCounter('team', 50, 1500);
+            },
+            
+            animateCounter(property, target, duration) {
+                const start = 0;
+                const increment = target / (duration / 16); // 60fps
+                let current = start;
+                
+                const interval = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        this[property] = target;
+                        clearInterval(interval);
+                    } else {
+                        this[property] = Math.floor(current);
+                    }
+                }, 16);
+            }
+        }
+    }
     </script>
 </body>
 </html>
