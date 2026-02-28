@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceramic Strip Heaters | Aggarwal Heaters</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+    <!-- NAV -->
+    <nav class="sticky top-0 z-50 bg-white shadow-lg" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="/index.html" class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-900 to-orange-500 rounded-lg flex items-center justify-center text-white font-bold">AH</div>
+                    <div class="hidden sm:block">
+                        <h1 class="text-xl sm:text-2xl font-bold text-blue-900">Aggarwal</h1>
+                        <p class="text-xs text-orange-500">Heating Solutions</p>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="/index.html" class="text-gray-700 hover:text-orange-500">Home</a>
+                    <a href="/products.html" class="text-gray-700 hover:text-orange-500">Products</a>
+                    <a href="/about.html" class="text-gray-700 hover:text-orange-500">About</a>
+                    <a href="/contact.html" class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-blue-900">Contact</a>
+                </div>
+                <button @click="open = !open" class="md:hidden text-blue-900 text-2xl">
+                    <i :class="open ? 'fas fa-times' : 'fas fa-bars'"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB -->
+    <div class="bg-gray-50 py-3 border-b">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center gap-2 text-sm">
+                <a href="/index.html" class="text-orange-500">Home</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <a href="/band-heaters.html" class="text-orange-500">Strip Heaters</a>
+                <i class="fas fa-chevron-right text-gray-400"></i>
+                <span class="text-gray-600 font-semibold">Ceramic Strip Heaters</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="bg-gradient-to-r from-blue-900 to-orange-500 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <!-- LEFT: IMAGE -->
+                <div data-aos="fade-right">
+                    <img src="images/BandHeater.avif" alt="Ceramic Strip Heaters" class="rounded-xl shadow-2xl w-full">
+                </div>
+
+                <!-- RIGHT: INFO -->
+                <div data-aos="fade-left">
+                    <span class="bg-white bg-opacity-20 text-white px-4 py-1 rounded-full text-sm font-semibold">Ceramic Strip Heaters</span>
+                    <h1 class="text-5xl font-bold mt-4 mb-6">Ceramic Strip Heaters</h1>
+                    <p class="text-lg text-gray-100 mb-6 leading-relaxed">
+                        Ceramic Strip Heaters are heavy-duty surface heating elements designed for high-temperature industrial applications. Constructed with nickel-chrome resistance wire embedded in interlocking ceramic blocks, these heaters provide superior heat retention, uniform heat distribution, and long operational life under continuous high-temperature conditions.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-yellow-300 mt-1"></i>
+                            <span>Capable of high temperature operation up to 600°C</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-yellow-300 mt-1"></i>
+                            <span>Excellent heat retention and thermal efficiency</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-yellow-300 mt-1"></i>
+                            <span>Durable ceramic insulation for long service life</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-check text-yellow-300 mt-1"></i>
+                            <span>Ideal for flat surface and plate heating applications</span>
+                        </div>
+                    </div>
+                    <a href="/contact.html" class="inline-block mt-8 bg-white text-blue-900 px-8 py-4 rounded-lg font-bold hover:bg-gray-100">
+                        Request Information
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIFICATIONS -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12">Technical Specifications</h2>
+
+            <div class="overflow-x-auto rounded-xl shadow-lg border border-gray-200">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-blue-900 text-white">
+                            <th class="px-6 py-4 text-left font-bold">Parameter</th>
+                            <th class="px-6 py-4 text-left font-bold">Specification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-white transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Maximum Temperature</td>
+                            <td class="px-6 py-4">Up to 600°C</td>
+                        </tr>
+                        <tr class="border-b hover:bg-white transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Watt Density</td>
+                            <td class="px-6 py-4">Up to 10 W/cm²</td>
+                        </tr>
+                        <tr class="border-b hover:bg-white transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Insulation Material</td>
+                            <td class="px-6 py-4">Interlocking Ceramic Blocks</td>
+                        </tr>
+                        <tr class="border-b hover:bg-white transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Operating Voltage</td>
+                            <td class="px-6 py-4">110V / 230V / 415V</td>
+                        </tr>
+                        <tr class="border-b hover:bg-white transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Power Range</td>
+                            <td class="px-6 py-4">250W – 4000W</td>
+                        </tr>
+                        <tr class="border-b hover:bg-white transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Terminal Type</td>
+                            <td class="px-6 py-4">Stud / Lead Wire / Terminal Box</td>
+                        </tr>
+                        <tr class="border-b hover:bg-white transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Temperature Control</td>
+                            <td class="px-6 py-4">External Thermocouple Compatible</td>
+                        </tr>
+                        <tr class="hover:bg-white transition">
+                            <td class="px-6 py-4 font-semibold text-blue-900">Quality Certification</td>
+                            <td class="px-6 py-4">ISO 9001:2015 Certified</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12">Key Features</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-orange-500" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-check text-orange-500 mr-2"></i> High Temperature Capability
+                    </h3>
+                    <p class="text-gray-600">Designed to withstand continuous high operating temperatures without performance degradation.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-orange-500" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-check text-orange-500 mr-2"></i> Energy Efficient Design
+                    </h3>
+                    <p class="text-gray-600">Ceramic insulation minimizes heat loss and improves thermal efficiency during prolonged operation.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-orange-500" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-check text-orange-500 mr-2"></i> Robust Mechanical Strength
+                    </h3>
+                    <p class="text-gray-600">Heavy-duty construction ensures resistance against vibration and mechanical stress in industrial environments.</p>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-lg border-l-4 border-orange-500" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-check text-orange-500 mr-2"></i> Customizable Dimensions
+                    </h3>
+                    <p class="text-gray-600">Available in various lengths, widths, wattages, and terminal configurations to meet specific industrial requirements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLICATIONS -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12">Ideal Applications</h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-orange-500">
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-cube text-orange-500 mr-2"></i> Plastic Processing Machinery
+                    </h3>
+                    <p class="text-gray-600">Used for heating extrusion barrels, dies, and flat surfaces in plastic manufacturing units.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-orange-500">
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-cogs text-orange-500 mr-2"></i> Packaging Equipment
+                    </h3>
+                    <p class="text-gray-600">Provides consistent surface heating in sealing and forming machines.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-orange-500">
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">
+                        <i class="fas fa-industry text-orange-500 mr-2"></i> Industrial Ovens & Plates
+                    </h3>
+                    <p class="text-gray-600">Ideal for flat plate heating in ovens and heavy-duty industrial heating systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Frequently Asked Questions</h2>
+
+            <div class="space-y-4" x-data="{ open: null }">
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button @click="open = open === 1 ? null : 1" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-100">
+                        <span class="font-bold text-lg text-blue-900">What temperature can ceramic strip heaters reach?</span>
+                        <i :class="open === 1 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
+                    </button>
+                    <div x-show="open === 1" class="px-6 pb-6 border-t text-gray-600">
+                        Ceramic strip heaters can operate up to 600°C depending on design and application conditions.
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button @click="open = open === 2 ? null : 2" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-100">
+                        <span class="font-bold text-lg text-blue-900">Are ceramic strip heaters suitable for continuous operation?</span>
+                        <i :class="open === 2 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
+                    </button>
+                    <div x-show="open === 2" class="px-6 pb-6 border-t text-gray-600">
+                        Yes, they are designed for continuous heavy-duty industrial use with stable performance.
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button @click="open = open === 3 ? null : 3" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-100">
+                        <span class="font-bold text-lg text-blue-900">Can dimensions be customized?</span>
+                        <i :class="open === 3 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
+                    </button>
+                    <div x-show="open === 3" class="px-6 pb-6 border-t text-gray-600">
+                        Yes, we manufacture ceramic strip heaters in customized lengths, widths, wattage ratings, and terminal types.
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <button @click="open = open === 4 ? null : 4" class="w-full p-6 text-left flex justify-between items-center hover:bg-gray-100">
+                        <span class="font-bold text-lg text-blue-900">Do they require external temperature control?</span>
+                        <i :class="open === 4 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
+                    </button>
+                    <div x-show="open === 4" class="px-6 pb-6 border-t text-gray-600">
+                        Yes, ceramic strip heaters are compatible with external thermocouples and temperature controllers for precise regulation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-blue-900 to-orange-500 text-white text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-4xl font-bold mb-6">Need Ceramic Strip Heaters?</h2>
+            <p class="text-lg text-gray-100 mb-8">
+                Get high-performance ceramic strip heaters engineered for durability, efficiency, and high-temperature industrial applications.
+            </p>
+            <a href="/contact.html" class="inline-block bg-white text-blue-900 px-10 py-4 rounded-lg font-bold hover:bg-gray-100">
+                <i class="fas fa-envelope mr-2"></i> Contact Us Now
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-12 md:py-16 w-full overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Aggarwal Heaters</h3>
+                    <p class="text-gray-400 text-sm">Leading manufacturer since 1998</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="/index.html" class="hover:text-orange-500">Home</a></li>
+                        <li><a href="/products.html" class="hover:text-orange-500">Products</a></li>
+                        <li><a href="/about.html" class="hover:text-orange-500">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-orange-500">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <p class="text-gray-400 text-sm mb-2">Ahmedabad, Gujarat</p>
+                    <p class="text-gray-400 text-sm">+91-9876543210</p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4">Follow</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-yellow-500 transition text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-yellow-500 transition text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 Aggarwal Heaters. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, offset: 100 });</script>
+</body>
+</html>
