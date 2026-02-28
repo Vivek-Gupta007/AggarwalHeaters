@@ -122,7 +122,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
-                <div class="flex-shrink-0">
+                <a href="#home" class="flex-shrink-0 group cursor-pointer">
                     <div class="flex items-center gap-2">
                         <div class="w-10 h-10 bg-gradient-to-br from-blue-900 to-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
                             AH
@@ -132,11 +132,11 @@
                             <p class="text-xs text-orange-500 font-semibold">Heating</p>
                         </div>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center gap-8">
-                    <a href="#home" class="text-gray-700 hover:text-orange-500 transition font-semibold">Home</a>
+                    <a href="#home" class="text-orange-500 transition font-semibold">Home</a>
                     <a href="products.html" class="text-gray-700 hover:text-orange-500 transition font-semibold">Products</a>
                     <a href="about.html" class="text-gray-700 hover:text-orange-500 transition font-semibold">About</a>
                     <a href="contact.html" class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-blue-900 transition font-semibold">Contact</a>
@@ -150,7 +150,7 @@
             
             <!-- Mobile Menu -->
             <div x-show="open" x-transition class="md:hidden pb-4 border-t">
-                <a href="#home" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">Home</a>
+                <a href="#home" class="block py-2 text-orange-500 font-semibold">Home</a>
                 <a href="products.html" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">Products</a>
                 <a href="about.html" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">About</a>
                 <a href="contact.html" class="block mt-2 bg-orange-500 text-white px-4 py-2 rounded-lg text-center font-semibold w-full">Contact</a>
@@ -214,7 +214,7 @@
                     <div class="relative">
                         <div class="absolute inset-0 bg-white opacity-10 rounded-3xl blur-3xl animate-pulse"></div>
                         <div class="relative bg-gradient-to-br from-white to-gray-100 rounded-3xl p-4 sm:p-8 shadow-2xl">
-                            <img src="./images//Header.jpeg" alt="Industrial Heating" class="w-full h-auto rounded-2xl shadow-lg object-cover">
+                            <img src="./images/Header.avif" alt="Industrial Heating" class="w-full h-auto rounded-2xl shadow-lg object-cover">
                             <div class="absolute -bottom-4 sm:-bottom-6 -right-4 sm:-right-6 bg-orange-500 text-white p-3 sm:p-6 rounded-2xl shadow-xl">
                                 <p class="text-xs sm:text-sm font-semibold">ISO 9001:2015</p>
                                 <p class="text-xs text-gray-100">Certified</p>
@@ -389,7 +389,7 @@
                     Our <span class="gradient-text">Heating Elements</span>
                 </h2>
                 <p class="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-                    24 different types for diverse applications
+                    12 different types for diverse applications
                 </p>
             </div>
             
@@ -483,7 +483,7 @@
             
             <div class="text-center mt-10 md:mt-12">
                 <a href="products.html" class="btn-primary bg-orange-500 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-lg font-bold text-sm sm:text-lg hover:bg-orange-700 transition inline-flex items-center gap-2 text-center">
-                    View All 24 Products <i class="fas fa-arrow-right"></i>
+                    View All 12 Products <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
@@ -582,43 +582,102 @@
          ============================================ -->
     <footer class="bg-gray-900 text-white py-12 md:py-16 w-full overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+            <!-- MAIN FOOTER CONTENT -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                <!-- COMPANY INFO -->
                 <div>
                     <h3 class="text-lg font-bold mb-4">Aggarwal Heaters</h3>
-                    <p class="text-gray-400 text-sm">Leading manufacturer since 1998</p>
+                    <p class="text-gray-400 text-sm">Leading industrial heating solutions manufacturer since 1998</p>
+                    <p class="text-gray-500 text-xs mt-2">ISO 9001:2015 | ISO 14001:2015</p>
                 </div>
                 
+                <!-- QUICK LINKS -->
                 <div>
-                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <h4 class="font-bold mb-4 text-orange-500">Quick Links</h4>
                     <ul class="space-y-2 text-gray-400 text-sm">
-                        <!-- <li><a href="#home" class="hover:text-orange-500">Home</a></li> -->
-                        <li><a href="products.html" class="hover:text-orange-500">Products</a></li>
-                        <li><a href="about.html" class="hover:text-orange-500">About</a></li>
-                        <li><a href="contact.html" class="hover:text-orange-500">Contact</a></li>
+                        <li><a href="#home" class="hover:text-orange-500 transition">Home</a></li>
+                        <li><a href="products.html" class="hover:text-orange-500 transition">Products</a></li>
+                        <li><a href="about.html" class="hover:text-orange-500 transition">About</a></li>
+                        <li><a href="contact.html" class="hover:text-orange-500 transition">Contact</a></li>
                     </ul>
                 </div>
                 
+                <!-- HALOL OFFICE - HEADQUARTERS -->
                 <div>
-                    <h4 class="font-bold mb-4">Contact</h4>
-                    <p class="text-gray-400 text-sm mb-2">Ahmedabad, Gujarat</p>
-                    <p class="text-gray-400 text-sm">+91-9876543210</p>
+                    <h4 class="font-bold mb-4 text-orange-500">
+                        <i class="fas fa-map-marker-alt mr-2"></i> Halol Office
+                    </h4>
+                    <div class="text-gray-400 text-sm space-y-1">
+                        <p class="text-white font-semibold text-xs">HEADQUARTERS</p>
+                        <p>Aggarwal Heaters</p>
+                        <p>Ground Floor 92</p>
+                        <p>Narayan Nagar, Rinky, G.I.D.C</p>
+                        <p>Panchmahal, Halol, Gujarat</p>
+                        <p>India - 389350</p>
+                        <p class="text-xs text-gray-500 mt-2">Showroom & Sales & Repair</p>
+                    </div>
                 </div>
                 
+                <!-- AHMEDABAD OFFICE - MANUFACTURING -->
                 <div>
-                    <h4 class="font-bold mb-4">Follow</h4>
-                    <div class="flex gap-3">
-                        <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-yellow-500 transition text-white">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-yellow-500 transition text-white">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
+                    <h4 class="font-bold mb-4 text-orange-500">
+                        <i class="fas fa-industry mr-2"></i> Ahmedabad
+                    </h4>
+                    <div class="text-gray-400 text-sm space-y-1">
+                        <p class="text-white font-semibold text-xs">MANUFACTURING HUB</p>
+                        <p>Aggarwal Heaters</p>
+                        <p>6, Harikrushna Industrail Park</p>
+                        <p>Opp Sagar Kathiyawadi Banquet</p>
+                        <p>Bakrol, Ahmedabad, Gujarat</p>
+                        <p>India - 382430</p>
+                        <p class="text-xs text-gray-500 mt-2">Manufacturing & Operations</p>
+                    </div>
+                </div>
+                
+                <!-- CONTACT & SOCIAL -->
+                <div>
+                    <h4 class="font-bold mb-4 text-orange-500">
+                        <i class="fas fa-phone mr-2"></i> Contact
+                    </h4>
+                    <div class="text-gray-400 text-sm space-y-2">
+                        <p>
+                            <a href="tel:+919979500920" class="hover:text-orange-500 transition">
+                                +91-9979500920
+                            </a>
+                        </p>
+                        <p>
+                            <a href="tel:+917801900920" class="hover:text-orange-500 transition">
+                                +91-7801900920
+                            </a>
+                        </p>
+                        <p>
+                            <a href="aggarwalheaters@gmail.com" class="hover:text-orange-500 transition break-all text-xs">
+                                aggarwalheaters@gmail.com
+                            </a>
+                        </p>
                     </div>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2024 Aggarwal Heaters. All rights reserved.</p>
+            <!-- DIVIDER -->
+            <div class="border-t border-gray-800 my-8"></div>
+            
+            <!-- BOTTOM FOOTER -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+                <div class="text-gray-400 text-xs sm:text-sm">
+                    <p>
+                        <i class="fas fa-certificate text-orange-500 mr-2"></i>
+                        ISO 9001:2015 | ISO 14001:2015 Certified
+                    </p>
+                </div>
+                
+                <div class="text-gray-400 text-xs sm:text-sm">
+                    <p>&copy; 2024 Aggarwal Heaters Pvt. Ltd. All rights reserved.</p>
+                </div>
+                
+                <div class="text-gray-400 text-xs sm:text-sm">
+                    <p>Designed with <i class="fas fa-heart text-orange-500"></i> for quality and innovation</p>
+                </div>
             </div>
         </div>
     </footer>
@@ -666,7 +725,7 @@
             startCounting() {
                 this.animateCounter('years', 25, 1500);
                 this.animateCounter('clients', 500, 1500);
-                this.animateCounter('products', 24, 1500);
+                this.animateCounter('products', 12, 1500);
                 this.animateCounter('team', 50, 1500);
             },
             
