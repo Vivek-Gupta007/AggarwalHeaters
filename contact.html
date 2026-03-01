@@ -422,14 +422,7 @@
                     return;
                 }
 
-                const message = `*Aggarwal Heaters - Quote Request*%0A%0A` +
-                `*Name:* ${name}%0A` +
-                `*Email:* ${email}%0A` +
-                `*Phone:* ${phone}%0A` +
-                `*Product:* ${product}%0A` +
-                `*Quantity:* ${qty || 'Not specified'}%0A%0A` +
-                `Please provide pricing and delivery details.%0A%0A` +
-                `Thanks!`;
+                const message = `AGGARWAL HEATERS - QUOTE REQUEST\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nProduct: ${product}\nQuantity: ${qty || 'Not specified'}\n\nPlease provide pricing and delivery details.\n\nThank you!`;
 
                 const whatsappUrl = `https://wa.me/919979500920?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
@@ -448,14 +441,7 @@
                     return;
                 }
 
-                const body = `Aggarwal Heaters - Quote Request%0A%0A` +
-                    `Name: ${name}%0A` +
-                    `Email: ${email}%0A` +
-                    `Phone: ${phone}%0A` +
-                    `Product: ${product}%0A` +
-                    `Quantity: ${qty || 'Not specified'}%0A%0A` +
-                    `Please provide pricing and delivery details.%0A%0A` +
-                    `Thanks!`;
+                const body = `AGGARWAL HEATERS - QUOTE REQUEST\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nProduct: ${product}\nQuantity: ${qty || 'Not specified'}\n\nPlease provide pricing and delivery details.\n\nThank you!`;
 
                 const emailUrl = `mailto:aggarwalheaters@gmail.com?subject=Quote%20Request&body=${encodeURIComponent(body)}`;
                 window.location.href = emailUrl;
@@ -475,14 +461,7 @@
                     return;
                 }
 
-                const text = `*Aggarwal Heaters - Sales Inquiry*%0A%0A` +
-                    `*Name:* ${name}%0A` +
-                    `*Company:* ${company}%0A` +
-                    `*Email:* ${email}%0A` +
-                    `*Phone:* ${phone}%0A` +
-                    `*Subject:* ${subject}%0A%0A` +
-                    `*Message:*%0A${message}%0A%0A` +
-                    `Thanks!`;
+                const text = `AGGARWAL HEATERS - SALES INQUIRY\n\nName: ${name}\nCompany: ${company}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\n\nMessage:\n${message}\n\nThank you!`;
 
                 const whatsappUrl = `https://wa.me/919979500920?text=${encodeURIComponent(text)}`;
                 window.open(whatsappUrl, '_blank');
@@ -502,14 +481,7 @@
                     return;
                 }
 
-            const body = `Aggarwal Heaters - Sales Inquiry%0A%0A` +
-                `Name: ${name}%0A` +
-                `Company: ${company}%0A` +
-                `Email: ${email}%0A` +
-                `Phone: ${phone}%0A` +
-                `Subject: ${subject}%0A%0A` +
-                `Message:%0A${message}%0A%0A` +
-                `Thanks!`;
+                const body = `AGGARWAL HEATERS - SALES INQUIRY\n\nName: ${name}\nCompany: ${company}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\n\nMessage:\n${message}\n\nThank you!`;
 
                 const emailUrl = `mailto:aggarwalheaters@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 window.location.href = emailUrl;
