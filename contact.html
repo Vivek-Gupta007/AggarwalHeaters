@@ -11,64 +11,180 @@
     </head>
     <body class="bg-white text-gray-900 overflow-x-hidden">
         <!-- NAV -->
-        <nav class="sticky top-0 z-50 bg-white shadow-lg" x-data="{ open: false }">
+        <nav class="sticky top-0 z-50 bg-white shadow-lg w-full" x-data="{ open: false }">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
-                    <a href="index.html" class="flex items-center gap-2">
-                        <div class="w-10 h-10 bg-gradient-to-br from-blue-900 to-orange-500 rounded-lg flex items-center justify-center text-white font-bold">AH</div>
-                        <div class="hidden sm:block">
-                            <h1 class="text-xl sm:text-2xl font-bold text-blue-900">Aggarwal</h1>
-                            <p class="text-xs text-orange-500">Heating</p>
+                    <!-- Logo -->
+                    <a href="index.html" class="flex-shrink-0 group cursor-pointer">
+                        <div class="flex items-center gap-2">
+                            <div class="w-10 h-10 bg-gradient-to-br from-blue-900 to-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                                AH
+                            </div>
+                            <div class="hidden sm:block">
+                                <h1 class="text-xl sm:text-2xl font-bold text-blue-900">Aggarwal</h1>
+                                <p class="text-xs text-orange-500 font-semibold">Heating</p>
+                            </div>
                         </div>
                     </a>
+                    
+                    <!-- Desktop Menu -->
                     <div class="hidden md:flex items-center gap-8">
-                        <a href="index.html" class="text-gray-700 hover:text-orange-500">Home</a>
-                        <a href="products.html" class="text-gray-700 hover:text-orange-500">Products</a>
-                        <a href="about.html" class="text-gray-700 hover:text-orange-500">About</a>
-                        <a href="contact.html" class="text-orange-500 font-bold">Contact</a>
+                        <a href="index.html" class="text-gray-700 hover:text-orange-500 transition font-semibold">Home</a>
+                        <a href="products.html" class="text-gray-700 hover:text-orange-500 transition font-semibold">Products</a>
+                        <a href="about.html" class="text-gray-700 hover:text-orange-500 transition font-semibold">About</a>
+                        <a href="#contact-page" class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-blue-900 transition font-semibold">Contact</a>
                     </div>
+                    
+                    <!-- Mobile Menu Button -->
                     <button @click="open = !open" class="md:hidden text-blue-900 text-2xl">
                         <i :class="open ? 'fas fa-times' : 'fas fa-bars'"></i>
                     </button>
+                </div>
+                
+                <!-- Mobile Menu -->
+                <div x-show="open" x-transition class="md:hidden pb-4 border-t">
+                    <a href="index.html" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">Home</a>
+                    <a href="products.html" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">Products</a>
+                    <a href="about.html" class="block py-2 text-gray-700 hover:text-orange-500 font-semibold">About</a>
+                    <a href="#contact-page" class="block mt-2 bg-orange-500 text-white px-4 py-2 rounded-lg text-center font-semibold w-full">Contact</a>
                 </div>
             </div>
         </nav>
 
         <!-- HERO -->
-        <section class="bg-gradient-to-r from-blue-900 to-orange-500 text-white py-16">
+        <section id="contact-page" class="bg-gradient-to-r from-blue-900 to-orange-500 text-white py-16 md:py-16 lg:py-18">
             <div class="max-w-7xl mx-auto px-4 text-center">
                 <h1 class="text-5xl font-bold mb-4">Get In Touch</h1>
                 <p class="text-xl text-gray-100">We're here to help with your heating solutions</p>
             </div>
         </section>
 
-        <!-- CONTACT INFO -->
-        <section class="py-20 bg-gray-50">
+        <!-- TWO ADDRESSES WITH MAPS -->
+        <section class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-white p-8 rounded-2xl shadow-lg text-center border-t-4 border-green-500">
-                        <div class="text-5xl text-green-500 mb-4"><i class="fab fa-whatsapp"></i></div>
-                        <h3 class="text-xl font-bold text-blue-900 mb-2">WhatsApp</h3>
-                        <p class="text-gray-600">+91-98765 43210</p>
-                        <p class="text-sm text-gray-500 mt-2">Instant reply</p>
+                <h2 class="text-4xl font-bold text-blue-900 text-center mb-12">Our Offices</h2>
+
+                <!-- Halol Office -->
+                <div class="mb-16">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Info -->
+                        <div class="bg-gradient-to-br from-blue-900 to-orange-500 text-white p-8 rounded-2xl shadow-lg">
+                            <h3 class="text-3xl font-bold mb-6">
+                                <i class="fas fa-map-marker-alt mr-2"></i> Halol Office
+                            </h3>
+                            <p class="text-lg font-semibold mb-4">HEADQUARTERS</p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-building text-yellow-300 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <p class="font-semibold">Aggarwal Heaters Pvt. Ltd.</p>
+                                        <p class="text-sm text-gray-200">Ground Floor 92</p>
+                                        <p class="text-sm text-gray-200">Narayan Nagar, Rinky, G.I.D.C</p>
+                                        <p class="text-sm text-gray-200">Panchmahal, Halol, Gujarat</p>
+                                        <p class="text-sm text-gray-200">India - 389350</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-phone text-yellow-300 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <p class="font-semibold">Phone</p>
+                                        <a href="tel:+919979500920" class="text-sm hover:text-yellow-300">+91-9979500920</a><br>
+                                        <a href="tel:+917801900920" class="text-sm hover:text-yellow-300">+91-7801900920</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-envelope text-yellow-300 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <p class="font-semibold">Email</p>
+                                        <a href="mailto:aggarwalheaters@gmail.com" class="text-sm hover:text-yellow-300">aggarwalheaters@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-clock text-yellow-300 mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <p class="font-semibold">Hours</p>
+                                        <p class="text-sm">Mon-Sun: 9:00 AM - 7:00 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white bg-opacity-20 p-3 rounded-lg mt-4">
+                                    <p class="text-sm font-semibold">
+                                        <i class="fas fa-store mr-2"></i> Showroom & Sales & Repair Services
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map -->
+                        <div class="rounded-2xl shadow-lg overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d346.58490940868023!2d73.46371305745045!3d22.531621338648893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1772376893539!5m2!1sen!2sin" width="100%" height="100%" style="border:0;border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg text-center border-t-4 border-yellow-500">
-                        <div class="text-5xl text-yellow-500 mb-4"><i class="fas fa-envelope"></i></div>
-                        <h3 class="text-xl font-bold text-blue-900 mb-2">Email</h3>
-                        <p class="text-gray-600">info@aggarwalheaters.com</p>
-                        <p class="text-sm text-gray-500 mt-2">Within 24 hours</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg text-center border-t-4 border-orange-500">
-                        <div class="text-5xl text-orange-500 mb-4"><i class="fas fa-phone"></i></div>
-                        <h3 class="text-xl font-bold text-blue-900 mb-2">Phone</h3>
-                        <p class="text-gray-600">+91-9876543210</p>
-                        <p class="text-sm text-gray-500 mt-2">Mon-Fri: 9AM-6PM</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl shadow-lg text-center border-t-4 border-blue-900">
-                        <div class="text-5xl text-blue-900 mb-4"><i class="fas fa-map-marker-alt"></i></div>
-                        <h3 class="text-xl font-bold text-blue-900 mb-2">Address</h3>
-                        <p class="text-gray-600">Ahmedabad, Gujarat</p>
-                        <p class="text-sm text-gray-500 mt-2">India 380001</p>
+                </div>
+
+                <!-- Ahmedabad Office -->
+                <div>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <!-- Map -->
+                        <div class="rounded-2xl shadow-lg overflow-hidden">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d218.20324736146844!2d72.73554369279948!3d22.98745547309336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s6%2C%20Harikrushna%20Industrial%20Park%20%20Opp%20Sagar%20Kathiyawadi%20Banquet%20%20Bakrol%2C%20Ahmedabad%2C%20Gujarat!5e1!3m2!1sen!2sin!4v1772377152433!5m2!1sen!2sin" width="100%" height="100%" style="border:0;border-radius:10px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                        <!-- Info -->
+                        <div class="bg-gradient-to-br from-orange-500 to-yellow-500 text-white p-8 rounded-2xl shadow-lg order-1 lg:order-2">
+                            <h3 class="text-3xl font-bold mb-6">
+                                <i class="fas fa-industry mr-2"></i> Ahmedabad
+                            </h3>
+                            <p class="text-lg font-semibold mb-4">MANUFACTURING HUB</p>
+                            
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-factory text-white mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <p class="font-semibold">Aggarwal Heaters Manufacturing</p>
+                                        <p class="text-sm text-gray-100">6, Harikrushna Industrial Park</p>
+                                        <p class="text-sm text-gray-100">Opp Sagar Kathiyawadi Banquet</p>
+                                        <p class="text-sm text-gray-100">Bakrol, Ahmedabad, Gujarat</p>
+                                        <p class="text-sm text-gray-100">India - 382430</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-phone text-white mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <p class="font-semibold">Phone</p>
+                                        <a href="tel:+919979500920" class="text-sm hover:text-gray-200">+91-9979500920</a><br>
+                                        <a href="tel:+917801900920" class="text-sm hover:text-gray-200">+91-7801900920</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-envelope text-white mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <p class="font-semibold">Email</p>
+                                        <a href="mailto:aggarwalheaters@gmail.com" class="text-sm hover:text-gray-200">aggarwalheaters@gmail.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-clock text-white mt-1 flex-shrink-0"></i>
+                                    <div>
+                                        <p class="font-semibold">Hours</p>
+                                        <p class="text-sm">Mon-sun: 9:00 AM - 7:00 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="bg-white bg-opacity-20 p-3 rounded-lg mt-4">
+                                    <p class="text-sm font-semibold">
+                                        <i class="fas fa-cogs mr-2"></i> Manufacturing & Operations Center
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -151,7 +267,7 @@
                             <span class="font-bold text-lg text-blue-900">How long does delivery take?</span>
                             <i :class="open === 1 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
                         </button>
-                        <div x-show="open === 1" class="px-6 pb-6 border-t text-gray-600">
+                        <div x-show="open === 1" class="px-6 py-6 border-t text-gray-600">
                             Standard products deliver in 2-3 weeks. Custom orders may take 4-6 weeks. Express delivery available.
                         </div>
                     </div>
@@ -161,7 +277,7 @@
                             <span class="font-bold text-lg text-blue-900">Do you offer customization?</span>
                             <i :class="open === 2 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
                         </button>
-                        <div x-show="open === 2" class="px-6 pb-6 border-t text-gray-600">
+                        <div x-show="open === 2" class="px-6 py-6 border-t text-gray-600">
                             Yes! Full customization available for wattage, voltage, dimensions. Contact our sales team for details.
                         </div>
                     </div>
@@ -171,7 +287,7 @@
                             <span class="font-bold text-lg text-blue-900">What payment methods do you accept?</span>
                             <i :class="open === 3 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
                         </button>
-                        <div x-show="open === 3" class="px-6 pb-6 border-t text-gray-600">
+                        <div x-show="open === 3" class="px-6 py-6 border-t text-gray-600">
                             We accept bank transfers, cheques, and online payments. Flexible payment terms for bulk orders.
                         </div>
                     </div>
@@ -181,7 +297,7 @@
                             <span class="font-bold text-lg text-blue-900">Do you provide warranty?</span>
                             <i :class="open === 4 ? 'fas fa-chevron-up' : 'fas fa-chevron-down'" class="text-orange-500"></i>
                         </button>
-                        <div x-show="open === 4" class="px-6 pb-6 border-t text-gray-600">
+                        <div x-show="open === 4" class="px-6 py-6 border-t text-gray-600">
                             1-year manufacturing warranty on all products. Extended warranty options available. Free technical support.
                         </div>
                     </div>
@@ -190,15 +306,105 @@
         </section>
 
         <!-- FOOTER -->
-        <footer class="bg-gray-900 text-white py-12">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div><h3 class="font-bold mb-4">Aggarwal Heaters</h3><p class="text-gray-400 text-sm">Since 1998</p></div>
-                    <div><h4 class="font-bold mb-4">Links</h4><ul class="space-y-2 text-gray-400 text-sm"><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="about.html">About</a></li></ul></div>
-                    <div><h4 class="font-bold mb-4">Contact</h4><p class="text-gray-400 text-sm">+91-9876543210</p><p class="text-gray-400 text-sm">info@aggarwalheaters.com</p></div>
-                    <div><h4 class="font-bold mb-4">Follow</h4><div class="flex gap-3"><a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-yellow-500"><i class="fab fa-facebook-f"></i></a><a href="#" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center hover:bg-yellow-500"><i class="fab fa-linkedin-in"></i></a></div></div>
+        <footer class="bg-gray-900 text-white py-12 md:py-16 w-full overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <!-- MAIN FOOTER CONTENT -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+                    <!-- COMPANY INFO -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Aggarwal Heaters</h3>
+                        <p class="text-gray-400 text-sm">Leading industrial heating solutions manufacturer since 1998</p>
+                        <p class="text-gray-500 text-xs mt-2">ISO 9001:2015 | ISO 14001:2015</p>
+                    </div>
+                    
+                    <!-- QUICK LINKS -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-orange-500">Quick Links</h4>
+                        <ul class="space-y-2 text-gray-400 text-sm">
+                            <li><a href="index.html" class="hover:text-orange-500 transition">Home</a></li>
+                            <li><a href="products.html" class="hover:text-orange-500 transition">Products</a></li>
+                            <li><a href="about.html" class="hover:text-orange-500 transition">About</a></li>
+                            <li><a href="#contact-page" class="hover:text-orange-500 transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- HALOL OFFICE - HEADQUARTERS -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-orange-500">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Halol Office
+                        </h4>
+                        <div class="text-gray-400 text-sm space-y-1">
+                            <p class="text-white font-semibold text-xs">HEADQUARTERS</p>
+                            <p>Aggarwal Heaters</p>
+                            <p>Ground Floor 92</p>
+                            <p>Narayan Nagar, Rinky, G.I.D.C</p>
+                            <p>Panchmahal, Halol, Gujarat</p>
+                            <p>India - 389350</p>
+                            <p class="text-xs text-gray-500 mt-2">Showroom & Sales & Repair</p>
+                        </div>
+                    </div>
+                    
+                    <!-- AHMEDABAD OFFICE - MANUFACTURING -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-orange-500">
+                            <i class="fas fa-industry mr-2"></i> Ahmedabad
+                        </h4>
+                        <div class="text-gray-400 text-sm space-y-1">
+                            <p class="text-white font-semibold text-xs">MANUFACTURING HUB</p>
+                            <p>Aggarwal Heaters</p>
+                            <p>6, Harikrushna Industrail Park</p>
+                            <p>Opp Sagar Kathiyawadi Banquet</p>
+                            <p>Bakrol, Ahmedabad, Gujarat</p>
+                            <p>India - 382430</p>
+                            <p class="text-xs text-gray-500 mt-2">Manufacturing & Operations</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CONTACT & SOCIAL -->
+                    <div>
+                        <h4 class="font-bold mb-4 text-orange-500">
+                            <i class="fas fa-phone mr-2"></i> Contact
+                        </h4>
+                        <div class="text-gray-400 text-sm space-y-2">
+                            <p>
+                                <a href="tel:+919979500920" class="hover:text-orange-500 transition">
+                                    +91-9979500920
+                                </a>
+                            </p>
+                            <p>
+                                <a href="tel:+917801900920" class="hover:text-orange-500 transition">
+                                    +91-7801900920
+                                </a>
+                            </p>
+                            <p>
+                                <a href="aggarwalheaters@gmail.com" class="hover:text-orange-500 transition break-all text-xs">
+                                    aggarwalheaters@gmail.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm"><p>&copy; 2024 Aggarwal Heaters. All rights reserved.</p></div>
+                
+                <!-- DIVIDER -->
+                <div class="border-t border-gray-800 my-8"></div>
+                
+                <!-- BOTTOM FOOTER -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+                    <div class="text-gray-400 text-xs sm:text-sm">
+                        <p>
+                            <i class="fas fa-certificate text-orange-500 mr-2"></i>
+                            ISO 9001:2015 | ISO 14001:2015 Certified
+                        </p>
+                    </div>
+                    
+                    <div class="text-gray-400 text-xs sm:text-sm">
+                        <p>&copy; 2024 Aggarwal Heaters Pvt. Ltd. All rights reserved.</p>
+                    </div>
+                    
+                    <div class="text-gray-400 text-xs sm:text-sm">
+                        <p>Designed with <i class="fas fa-heart text-orange-500"></i> for quality and innovation</p>
+                    </div>
+                </div>
             </div>
         </footer>
 
@@ -218,19 +424,19 @@
 
                 const message = `Hello Aggarwal Heaters,
 
-    I need a quote for the following:
+                I need a quote for the following:
 
-    Name: ${name}
-    Email: ${email}
-    Phone: ${phone}
-    Product: ${product}
-    Quantity: ${qty || 'Not specified'}
+                Name: ${name}
+                Email: ${email}
+                Phone: ${phone}
+                Product: ${product}
+                Quantity: ${qty || 'Not specified'}
 
-    Please provide pricing and delivery details.
+                Please provide pricing and delivery details.
 
-    Thanks!`;
+                Thanks!`;
 
-                const whatsappUrl = `https://wa.me/7990583513?text=${encodeURIComponent(message)}`;
+                const whatsappUrl = `https://wa.me/9979500920?text=${encodeURIComponent(message)}`;
                 window.open(whatsappUrl, '_blank');
             }
 
@@ -249,19 +455,19 @@
 
                 const body = `Hello Aggarwal Heaters,
 
-    I need a quote for the following:
+                I need a quote for the following:
 
-    Name: ${name}
-    Email: ${email}
-    Phone: ${phone}
-    Product: ${product}
-    Quantity: ${qty || 'Not specified'}
+                Name: ${name}
+                Email: ${email}
+                Phone: ${phone}
+                Product: ${product}
+                Quantity: ${qty || 'Not specified'}
 
-    Please provide pricing and delivery details.
+                Please provide pricing and delivery details.
 
-    Thanks!`;
+                Thanks!`;
 
-                const emailUrl = `mailto:guptavivek.0987@gmail.com?subject=Quote%20Request&body=${encodeURIComponent(body)}`;
+                const emailUrl = `aggarwalheaters@gmail.com?subject=Quote%20Request&body=${encodeURIComponent(body)}`;
                 window.location.href = emailUrl;
             }
 
@@ -281,18 +487,18 @@
 
                 const text = `Hello Aggarwal Heaters,
 
-    Name: ${name}
-    Company: ${company}
-    Email: ${email}
-    Phone: ${phone}
-    Subject: ${subject}
+                Name: ${name}
+                Company: ${company}
+                Email: ${email}
+                Phone: ${phone}
+                Subject: ${subject}
 
-    Message:
-    ${message}
+                Message:
+                ${message}
 
-    Thanks!`;
+                Thanks!`;
 
-                const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(text)}`;
+                const whatsappUrl = `https://wa.me/9979500920?text=${encodeURIComponent(text)}`;
                 window.open(whatsappUrl, '_blank');
             }
 
@@ -312,18 +518,18 @@
 
                 const body = `Hello Aggarwal Heaters,
 
-    Name: ${name}
-    Company: ${company}
-    Email: ${email}
-    Phone: ${phone}
-    Subject: ${subject}
+                Name: ${name}
+                Company: ${company}
+                Email: ${email}
+                Phone: ${phone}
+                Subject: ${subject}
 
-    Message:
-    ${message}
+                Message:
+                ${message}
 
-    Thanks!`;
+                Thanks!`;
 
-                const emailUrl = `mailto:info@aggarwalheaters.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                const emailUrl = `mailto:aggarwalheaters@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 window.location.href = emailUrl;
             }
         </script>
