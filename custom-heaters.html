@@ -4,11 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Heaters | Aggarwal Heaters</title>
+       <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+      <style>
+        * { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+        
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #FF6B35; border-radius: 5px; }
+        
+        .product-hero {
+            background: linear-gradient(135deg, #003366 0%, #004d99 100%);
+        }
+        
+        .spec-card {
+            transition: all 0.3s ease;
+            border-left: 4px solid #FF6B35;
+        }
+        
+        .spec-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-button {
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-button.active {
+            background: #003366;
+            color: white;
+        }
+        
+        .feature-box {
+            transition: all 0.3s ease;
+            border: 2px solid #F5F5F5;
+        }
+        
+        .feature-box:hover {
+            border-color: #FF6B35;
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.2);
+        }
+        
+        .tab-button {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .tab-button.active {
+            border-bottom-color: #FF6B35;
+            color: #003366;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body class="bg-white text-gray-900 overflow-x-hidden">
     <!-- NAV -->
