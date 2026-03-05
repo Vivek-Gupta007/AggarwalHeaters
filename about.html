@@ -23,7 +23,12 @@
             .card-hover { transition: all 0.3s ease; }
             .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); }
         </style>
-    </head>
+        <!-- Vercel Web Analytics -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
     <body class="bg-white text-gray-900 overflow-x-hidden">
         <!-- NAV -->
         <nav class="fixed top-0 z-50 bg-white shadow-lg w-full" x-data="{ open: false }">
